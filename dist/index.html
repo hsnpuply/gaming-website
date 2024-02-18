@@ -11,26 +11,41 @@
 
 <body>
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full">
-        <nav class="custom-navbar flex justify-between items-center px-5">
-            <!-- logo -->
-            <div class="logo">
-                <img src="../images/logo-compact.png" alt="logo" class="logo-img">
+    <header class="fixed top-0 left-0 w-full  h-full ">
+        <nav class="custom-navbar md:flex md:justify-between flex-col md:flex-row items-center p-4 relative  ">
+            <div class="navbar w-full flex items-center justify-between">
+                <!-- logo -->
+                <a href="#" class="logo-link">
+                    <div class="logo">
+                    </div>
+                </a>
+                <!-- End of Logo -->
+
+                <!-- Hamberger menu in Mobile Version -->
+                <div class="hamberger-menu-section block md:hidden cursor-pointer">
+                    <div class="hamberger-menu flex flex-col gap-2 ">
+                        <div class="line line-1 w-9 h-1 bg-primary"></div>
+                        <div class="line line-2 w-9 h-1 bg-primary"></div>
+                        <div class="line line-3 w-9 h-1 bg-primary"></div>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- navbar -->
-
-            <div class="hamberger-menu flex flex-col gap-2">
-                <div class="line line-1 w-9 h-1 bg-white"></div>
-                <div class="line line-2 w-9 h-1 bg-white"></div>
-                <div class="line line-3 w-9 h-1 bg-white"></div>
+            <div class="navbar-collapse ">
+                <!-- navbar -->
+                <ul
+                    class="nav-links overflow-hidden  items-center gap-5 hidden md:flex  flex-row justify-center  text-primary    my-5 md:my-0 text-lg">
+                    <li class=""><a href="" class="">Heroes</a>
+                    </li>
+                    <li><a href="" class="">Gallery</a></li>
+                    <li><a href="" class="">Store</a></li>
+                    <li><a href="" class="">Contact</a></li>
+                </ul>
             </div>
-            <ul class="nav-links hidden">
-                <li><a href="">Heroes</a></li>
-                <li><a href="">Gallery</a></li>
-                <li><a href="">Store</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
+
+
+
         </nav>
     </header>
 
@@ -46,19 +61,114 @@
 
     <!-- End of Hero -->
 
-    <!-- Hero -->
+    <!-- Divider -->
+    <div class="divider ">
+        <hr class="divider-rule">
 
-    <section class="hero flex items-center justify-center">
-        <div class="hero-logo">
-            <img src="../images/hero-logo.png" alt="Dragon Logo" class="hero-logo">
+    </div>
+    <!-- End of Divider -->
+
+
+    <!-- Heroes Section -->
+    <section class="heroes">
+        <div class="heroes-content">
+            <!-- Description -->
+            <div class="description">
+                <h2 class="title-desc">NOW WE'VE COME FULL CIRCLE</h2>
+                <p class="text-desc">
+                    A smokescreen covered their continuous blinks towards the outskirts of the great
+                    kingdom, until the cathedral was the only thing clearly visible. Along the way, they could sense the
+                    great shadow of a Dragon, watching their every step. Then, the voices of survivors seeking revenge
+                    towards the witch echoed through the destroyed cathedral halls. Others were tending to their
+                    wounded, others were trying to collect the Enlightened's burning husk from the great funeral pyre,
+                    whilst the archbishop was chanting blessings, leading the flock of peasants as if they were
+                    warriors, preparing to battle the mighty dragon...</p>
+            </div>
+
+            <!-- Heroes Preview -->
+            <div class="Heroes-introduce">
+                <h2 class="title-intro">CHOOSE YOUR HERO</h2>
+
+                <div class="heroes-preview flex flex-col gap-5">
+                    <div class="hero-1">
+                        <a href="#">
+                            <img src="../images/hero-1.jpg" alt="Hero>" class="hero-img">
+                            <h3 class="hero-name"></h3>
+                            <p class="hero-desc">
+                                Aleister, the former demonlord, is always looking at others bearing a malefic grin upon
+                                his twisted visage, harnessing all the power he can muster as he directs bolts of pure
+                                chaos towards his foes.
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="hero-2">
+                        <a href="#">
+                            <img src="../images/hero-1.jpg" alt="Hero>" class="hero-img">
+                            <h3 class="hero-name"></h3>
+                            <p class="hero-desc">
+                                Aleister, the former demonlord, is always looking at others bearing a malefic grin upon
+                                his twisted visage, harnessing all the power he can muster as he directs bolts of pure
+                                chaos towards his foes.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="hero-3">
+                        <a href="#">
+                            <img src="../images/hero-1.jpg" alt="Hero>" class="hero-img">
+                            <h3 class="hero-name"></h3>
+                            <p class="hero-desc">
+                                Aleister, the former demonlord, is always looking at others bearing a malefic grin upon
+                                his twisted visage, harnessing all the power he can muster as he directs bolts of pure
+                                chaos towards his foes.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="hero-4">
+                        <a href="#">
+                            <img src="../images/hero-1.jpg" alt="Hero>" class="hero-img">
+                            <h3 class="hero-name"></h3>
+                            <p class="hero-desc">
+                                Aleister, the former demonlord, is always looking at others bearing a malefic grin upon
+                                his twisted visage, harnessing all the power he can muster as he directs bolts of pure
+                                chaos towards his foes.
+                            </p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
+
+        <!-- Preview Hero Model & Info -->
+        <div class="hero-model-info">
+            <!-- Hero model -->
+            <div class="hero-model">
+                <!-- Hero model title -->
+                <div class="title_hero-model">
+                    <h4 class="title-model">Hero Name: </h4>
+                </div>
+                <!-- Hero model info -->
+                <div class="info_hero-model">
+                    <img src="../images/hero-model.png" alt="Hero Model" class="hero-model-img">
+                    <!-- stats -->
+                    <ul class="stats-info">
+                        <li class="Strength">Strength: </li>
+                        <li class="Dexterity">Dexterity: </li>
+                        <li class="Agility">Agility: </li>
+                        <li class="Willpower">Willpower: </li>
+                        <li class="Intelligence">Intelligence: </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </section>
-
-    <!-- End of Hero -->
-
+    <!-- End of Heroes Section -->
 
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
