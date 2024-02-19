@@ -5,8 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dragon Warrior</title>
+    <!-- Tailwind -->
     <link rel="stylesheet" href="output.css">
+
+    <!-- myCustom css -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body class="overflow-x-hidden">
@@ -161,7 +168,7 @@
 
 
             <!-- Hero model -->
-            <div class="hero-model bg-white/20 w-1/3 flex items-center flex-col relative">
+            <div class="hero-model   flex items-center flex-col relative">
                 <!-- Borders -->
                 <span class="border-corner border-model-top-left"></span>
                 <span class="border-corner border-model-top-right"></span>
@@ -176,21 +183,14 @@
 
                 <!-- Hero model title -->
                 <div class="title_hero-model  w-full py-10 border-b-2 border-black relative">
-                    <h4 class="title-model text-2xl text-primary">Hero Name: </h4>
-                    <span class="close-model cursor-pointer text-primary absolute top-5 right-8">x</span>
+                    <h4 class="title-model text-2xl text-primary">Hero Name: <span id="honored-hero_name"></span></h4>
+                    <span class="close-model cursor-pointer text-2xl text-primary absolute top-5 right-8"
+                        id="close-model">x</span>
                 </div>
 
                 <!-- Hero model info -->
                 <div class="info_hero-model">
-                    <img src="../images/character-1.jpg" alt="Hero Model" class="hero-model-img py-8">
-                    <!-- stats -->
-                    <ul class="stats-info pb-14">
-                        <li class="Strength">Strength: </li>
-                        <li class="Dexterity">Dexterity: </li>
-                        <li class="Agility">Agility: </li>
-                        <li class="Willpower">Willpower: </li>
-                        <li class="Intelligence">Intelligence: </li>
-                    </ul>
+
                 </div>
                 <!-- download button -->
                 <div class="download_hero-model ">
@@ -216,10 +216,115 @@
     <!-- End of Divider -->
 
 
+    <!-- Gallery Section -->
+    <section class="gallery py-5">
+        <div class="container-gallery container mx-auto"> <!-- Test container-->
 
-    <!-- <script src="script.js"></script> -->
+            <!-- Gallery Info -->
+            <div class="gallery-info">
+                <h2 class="gallery-title">Begin Your journey</h2>
+                <p class="gallery-desc text-center text-primary">
+                    The ornate peace of these halls would be shattered now and then by the faint whispers of the Statue
+                    of a thousand faces, as the soul fragments collided and the Heroes met in glorious Combat. For them
+                    it would always be the first time, until someone's time to be free of this burden would come - then
+                    he'd regain consciousness of who he was and what he had to do.
+                    <br>
+                    <br>
+                    <span>But, this time, something was different.</span>
+                </p>
+            </div>
+
+            <!-- Gallery Swiper -->
+            <div class="my-gallery-framer border-2 border-primary   ">
+                <div class="swiper  h-auto">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide" id="swiper-1">
+                            <img src="../images/swiper-images/1.jpg" alt="" class="swiper-img">
+                            <p class="swiper-desc">Image description goes here</p>
+                        </div>
+
+                        <div class="swiper-slide" id="swiper-2">
+                            <img src="../images/swiper-images/2.jpg" alt="" class="swiper-img">
+                            <p class="swiper-desc">Image description goes here</p>
+                        </div>
+
+
+                        <div class="swiper-slide" id="swiper-3">
+                            <img src="../images/swiper-images/3.jpg" alt="" class="swiper-img">
+                            <p class="swiper-desc">Image description goes here</p>
+                        </div>
+
+                        <div class="swiper-slide" id="swiper-4">
+                            <img src="../images/swiper-images/4.jpg" alt="" class="swiper-img">
+                            <p class="swiper-desc">Image description goes here</p>
+                        </div>
+
+                        <div class="swiper-slide" id="swiper-5">
+                            <img src="../images/swiper-images/5.jpg" alt="" class="swiper-img">
+                            <p class="swiper-desc">Image description goes here</p>
+                        </div>
+
+                        <div class="swiper-slide" id="swiper-6">
+                            <img src="../images/swiper-images/6.jpg" alt="" class="swiper-img">
+                            <p class="swiper-desc">Image description goes here</p>
+                        </div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End of Gallery Section -->
+
+
     <script src="script.js"></script>
-    <script src="test.js"></script>
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: true,
+            freemode: {
+                enabled: false
+            },
+            // autoplay: {
+            //     delay: 5000,
+
+            // },
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                bulletClass: 'my-bullet',
+                bulletActiveClass:'my-bullet-active'
+
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+        });
+    </script>
 </body>
 
 </html>

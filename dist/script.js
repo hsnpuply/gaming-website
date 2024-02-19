@@ -1,10 +1,12 @@
 const hamberger_menu_link = document.querySelector('.hamberger-menu-section');
 const hamberger_menu_icon = document.querySelector('.hamberger-menu');
+const info_hero__model = document.querySelector('.info_hero-model');
 const nav_links = document.querySelector('.nav-links');
 const hero_logo = document.querySelector('.hero-logo-img');
+const honored_hero__name = document.querySelector('#honored-hero_name');
 
 const card_model = document.querySelector('.hero-model-info');
-const close_model = document.querySelector('.close-model');
+const close_model = document.querySelector('#close-model');
 const hero__model = document.querySelector('.hero-model');
 
 // test
@@ -72,52 +74,25 @@ const heroes_stats = [
 ]
 
 
-const cloze_model_btn=  '<span class="close-model cursor-pointer text-primary absolute top-5 right-8">x</span>;'
 
 document.querySelectorAll('.hero-card').forEach((card,i)=>{
     card.addEventListener('click',()=>{
         card_model.classList.add('active');
-        hero__model.innerHTML= `
-        <!-- Borders -->
-        <span class="border-corner border-model-top-left"></span>
-        <span class="border-corner border-model-top-right"></span>
-        <span class="border-corner border-model-bottom-left"></span>
-        <span class="border-corner border-model-bottom-right"></span>
+        info_hero__model.innerHTML= `
 
-        <span class="border-side  border-model-top"></span>
-        <span class="border-side border-model-bottom"></span>
-        <span class="border-side border-model-right"></span>
-        <span class="border-side border-model-left"></span>
-
-
-        <div class="title_hero-model  w-full py-10 border-b-2 border-black relative">
-        <h4 class="title-model text-2xl text-primary">Hero Name: ${heroes_stats[i].hero_name} </h4>
-
-        <span class="my_hero_close">${cloze_model_btn}</span>
-    </div>
-
-    <!-- Hero model info -->
-    <div class="info_hero-model">
         <img src="${heroes_stats[i].img}" alt="Hero Model" class="hero-model-img py-8">
         <!-- stats -->
         <ul class="stats-info pb-14">
-            <li class="Strength">Strength: ${heroes_stats[i].Str}</li>
-            <li class="Dexterity">Dexterity: ${heroes_stats[i].Dex}</li>
-            <li class="Agility">Agility: ${heroes_stats[i].agility}</li>
-            <li class="Willpower">Willpower: ${heroes_stats[i].Willpower}</li>
-            <li class="Intelligence">Intelligence: ${heroes_stats[i].int}</li>
+            <li class="Strength">Strength: <span class="stat-value">${heroes_stats[i].Str}</span></li>
+            <li class="Dexterity">Dexterity: <span class="stat-value">${heroes_stats[i].Dex}</span></li>
+            <li class="Agility">Agility: <span class="stat-value">${heroes_stats[i].agility}</span></li>
+            <li class="Willpower">Willpower: <span class="stat-value">${heroes_stats[i].Willpower}</span></li>
+            <li class="Intelligence">Intelligence: <span class="stat-value">${heroes_stats[i].int}</span></li>
         </ul>
     </div>
 
-    <!-- download button -->
-    <div class="download_hero-model ">
-        <a href="https://www.crazygames.com/game/dragon-and-fury" target="_blank" class="download-btn  relative">
-            <span class="download-left-side"></span>
-            <span class="download-mid-side ">Download & Play Now</span>
-            <span class="download-right-side"></span>
-        </a>
-    </div>
         `
+        honored_hero__name.innerHTML= ` ${heroes_stats[i].hero_name}`
     })
 })
 
@@ -147,3 +122,6 @@ document.addEventListener('click', (event) => {
 
 
 
+close_model.addEventListener('click',()=>{
+    card_model.classList.remove('active');
+})

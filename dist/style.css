@@ -148,16 +148,20 @@ h2 {
   margin: 0 auto;
 }
 
-.text-desc {
+.text-desc,
+.gallery-desc {
   margin: 0.2rem auto 0 auto;
   font-family: Helvetica, Arial, sans-serif;
   color: #71675b;
-  font-size: 1.1em;
+  font-size: 1.2em;
   padding: 0 20px;
   font-weight: 400;
   text-align: center;
-  line-height: 1.8rem;
+  line-height: 2rem;
+  letter-spacing: 0.03rem;
+  word-spacing: 0.05rem;
   text-shadow: 0px 0px 3px #000000;
+  width: 70%;
 }
 .text-desc::after {
   content: "";
@@ -253,6 +257,22 @@ h2 {
 
 .hero-model {
   animation: hero-model-active both 1s ease-in-out;
+  width: 45vw;
+  height: auto;
+}
+
+@media (max-width: 990px) {
+  .hero-model {
+    width: 90vw;
+    height: 90vh;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1140px) {
+  .hero-model {
+    width: 80vw;
+    height: auto;
+  }
 }
 
 @keyframes hero-model-active {
@@ -264,6 +284,21 @@ h2 {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.hero-model-img {
+  filter: drop-shadow(2px 5px 5px #000);
+  transition: all 0.35s ease-in-out;
+}
+
+.hero-model-img:hover {
+  filter: drop-shadow(1px 4px 5px #de9527c7);
+  transition: all 1s ease-in-out;
+}
+.stat-value {
+  text-shadow: 1px 4px 10px #fca727c7;
+  transition: all 0.5s ease-in-out;
+  font-weight: bold;
 }
 
 .title_hero-model {
@@ -365,19 +400,18 @@ h2 {
 
 /* Download Model */
 .download_hero-model {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.55)),
-    url(../img/dark_wall.png);
+    url(../images/dark_wall.png);
   width: 100%;
   height: 100%;
   padding: 1.8rem 1.33rem;
+  box-shadow: -2px -3px 5px #000;
 }
 .download-btn {
-  width: 90%;
-  height: 80%;
-  padding: 0.8rem 0;
+  padding: 0.8rem 15%;
   color: #f3aa55;
   text-shadow: 0 0 8px #000000;
   font-family: "Cinzel Decorative", sans-serif;
@@ -385,6 +419,8 @@ h2 {
 }
 .download-btn:hover .download-mid-side {
   color: #ffcb8d;
+  text-shadow: 0 0 8px #ffcb8d;
+  transition: all 0.3s ease-in-out;
 }
 .download-left-side {
   background: url(../images/button-sprite.png) no-repeat 0 -108px;
@@ -395,7 +431,9 @@ h2 {
   width: 51px;
   z-index: 1;
 }
-
+.download-mid-side {
+  transition: all 0.6s ease-in-out;
+}
 .download-right-side {
   background: url(../images/button-sprite.png) no-repeat 0 -162px;
   height: 54px;
@@ -406,3 +444,82 @@ h2 {
   z-index: 1;
 }
 /* End of  Heroes Section */
+
+/* Gallery Section */
+.gallery {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/dark_leather.png);
+  box-shadow: inset 0 10px 50px #000000;
+}
+
+.gallery-desc {
+  letter-spacing: 0.03rem;
+}
+.gallery-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Swiper */
+
+.swiper-slide {
+  position: relative;
+}
+.swiper-desc {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.4em;
+  text-shadow: 0 0 15px #99774c, 0px -5px 20px #a17e51, 0 5px 20px #96744a;
+}
+
+/* test */
+.my-bullet {
+  display: inline-block;
+  width: 20px !important;
+  height: 22px;
+  padding: 0.08rem 0.3rem;
+  margin: 0 0.1rem;
+  border-radius: 40px;
+  border: 4px double #ecd19a;
+  margin: 0;
+}
+.my-bullet-active {
+  background-color: #96744a !important;
+}
+
+.swiper-button-prev {
+  width: 7% !important;
+  height: 60px !important;
+  left: 0px !important;
+  right: 0 !important;
+  background: url("../images/swiper-images/arrows/carousel-sprite.png")
+    no-repeat 0 0;
+}
+.swiper-button-prev::after {
+  background: url(../images/swiper-images/arrows/carousel-sprite.png) no-repeat -84px
+    0;
+  bottom: 0;
+  content: "";
+  width: 80%;
+  left: -3px !important;
+  opacity: 0;
+  position: absolute;
+  right: 0 !important;
+  top: 1px;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.swiper-button-prev:hover::after {
+  opacity: 1;
+}
+
+.swiper-button-prev:after {
+  content: "" !important;
+}
+/* Gallery Section */

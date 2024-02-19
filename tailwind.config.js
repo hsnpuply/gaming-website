@@ -7,6 +7,10 @@ module.exports = {
         'primary': '#ecd19a',
       }
     },
+    container: {
+      center: true,
+      padding:'2rem',
+    },
   },
   plugins: [],
 }
