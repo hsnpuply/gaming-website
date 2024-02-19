@@ -4,7 +4,9 @@
   font-family: "Palatino Light";
   src: url("../fonts/Palatino Light.otf");
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   color: #383838;
   font-size: 18px;
@@ -26,6 +28,9 @@ body {
   background-size: 50px auto;
   padding: 0;
   margin-top: 1px;
+}
+.logo:hover {
+  background-position-y: 83%;
 }
 .hamberger-menu {
   transition: all 0.62s ease-in-out;
@@ -56,7 +61,15 @@ body {
   text-shadow: 0 0 15px #99774c, 0px -5px 20px #a17e51, 0 5px 20px #96744a;
   color: white;
 }
-
+.hero-logo-img {
+  opacity: 0;
+}
+.hero-logo-img.onload {
+  display: flex;
+  opacity: 1;
+  transition: all 2.5s ease;
+  filter: drop-shadow(2px 5px 5px #000);
+}
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05)),
     url("../images/hero_Bg.jpg");
@@ -126,5 +139,270 @@ h2 {
 
 /* Heroes Section */
 .heroes {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.55)),
+    url(../images/dark_wall.png);
+  padding-top: 25px;
+  padding-bottom: 105px;
+}
+.heroes-content {
+  margin: 0 auto;
+}
+
+.text-desc {
+  margin: 0.2rem auto 0 auto;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #71675b;
+  font-size: 1.1em;
+  padding: 0 20px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.8rem;
+  text-shadow: 0px 0px 3px #000000;
+}
+.text-desc::after {
+  content: "";
+  width: 100%;
+
+  height: 2rem;
+  position: absolute;
+  left: 0%;
+  bottom: -3.5rem;
+  background: url("../images/blog-separator-2.png") 50% 100% no-repeat;
+}
+
+.hero-img {
+  border: 1px solid;
+  opacity: 0.5;
+  transition: all 0.9s ease;
+  box-shadow: 0px 0px 25px 0px #000000;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .hero-img {
+    width: 65%;
+    /* important */
+  }
+}
+
+@media (min-width: 1025px) {
+  .hero-img {
+    width: 225px !important;
+    height: 225px !important;
+  }
+}
+
+.hero-card:hover .hero-img {
+  opacity: 1;
+  border: 1px solid #9d9280;
+  box-shadow: 0px 0px 25px 0px #37271b;
+  transform: scale(1.07);
+  transition: all 0.7s ease;
+}
+
+.hero-card:hover h2 {
+  text-shadow: 0px 0px 4px #383838;
+}
+.hero-card:hover p {
+  color: #9d9280;
+}
+/* testimonials */
+.hero-card p {
+  font-family: "Palatino Light", sans-serif;
+}
+
+.hero-desc {
+  margin: 0 auto;
+  max-width: 60%;
+  font-size: 1.1em;
+  word-spacing: 0.05rem;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #71675b;
+  transition: all 0.5s;
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+
+.hero-name {
+  margin-top: 2rem;
+}
+
+.hero-desc-container {
+  min-width: 50%;
+}
+
+/* Hero Model Preview */
+.hero-model-info {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* transform: translateY(-50%); */
+  height: 100vh;
+  background: #000000bd;
+  text-align: center;
+  z-index: 23;
+}
+.hero-model-info.active {
+  display: flex;
+}
+
+.hero-model {
+  animation: hero-model-active both 1s ease-in-out;
+}
+
+@keyframes hero-model-active {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.title_hero-model {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.55)),
+    url("../images/dark_wall.png");
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.title-model,
+.stats-info {
+  color: #ad835a;
+}
+.info_hero-model {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-image: url(../images/dark_leather.png);
+}
+
+.close-model:hover {
+  text-shadow: -2px 2px 5px #fff;
+}
+
+/* Borders of modal view */
+.border-corner,
+.border-side {
+  background: url(../images/item-border-sprite.png) 0 0 no-repeat;
+  position: absolute;
+  z-index: 100;
+}
+.border-side {
+  z-index: 50;
+}
+
+.border-model-top-left {
+  left: 0;
+  height: 15px;
+  top: 0;
+  width: 29px;
+}
+
+.border-model-top-right {
+  background-position: -27px 0;
+  height: 14px;
+  right: 0;
+  top: 0;
+  width: 29px;
+}
+
+.border-model-bottom-left {
+  background-position: 0 -14px;
+  bottom: 0;
+  height: 15px;
+  left: 0;
+  width: 26px;
+}
+
+.border-model-bottom-right {
+  background-position: -32px -14px;
+  bottom: 0;
+  height: 15px;
+  right: 0;
+  width: 26px;
+}
+
+.border-model-right {
+  background: url(../images/item-border-sprite.png) -69px 0 repeat-y;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  width: 11px;
+  z-index: 50;
+}
+
+.border-model-left {
+  background: url(../images/item-border-sprite.png) -58px 0 repeat-y;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  width: 11px;
+  z-index: 50;
+}
+
+.border-model-bottom {
+  background: url(../images/item-border-frame-sprite_yAxsi.png) 0 -8px repeat-x;
+  bottom: 0;
+  height: 8px;
+  left: 0;
+  right: 0;
+}
+
+.border-model-top {
+  background: url(../images/item-border-frame-sprite_yAxsi.png) 0 0px repeat-x;
+  top: 0;
+  height: 8px;
+  left: 0;
+  right: 0;
+}
+
+/* Download Model */
+.download_hero-model {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.55)),
+    url(../img/dark_wall.png);
+  width: 100%;
+  height: 100%;
+  padding: 1.8rem 1.33rem;
+}
+.download-btn {
+  width: 90%;
+  height: 80%;
+  padding: 0.8rem 0;
+  color: #f3aa55;
+  text-shadow: 0 0 8px #000000;
+  font-family: "Cinzel Decorative", sans-serif;
+  background: url(../images/button-sprite.png) repeat-x 0 0;
+}
+.download-btn:hover .download-mid-side {
+  color: #ffcb8d;
+}
+.download-left-side {
+  background: url(../images/button-sprite.png) no-repeat 0 -108px;
+  height: 54px;
+  left: -12px;
+  position: absolute;
+  top: 0;
+  width: 51px;
+  z-index: 1;
+}
+
+.download-right-side {
+  background: url(../images/button-sprite.png) no-repeat 0 -162px;
+  height: 54px;
+  right: -12px;
+  position: absolute;
+  top: 0;
+  width: 51px;
+  z-index: 1;
 }
 /* End of  Heroes Section */

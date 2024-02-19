@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="overflow-x-hidden">
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full  h-full ">
+    <header class="fixed top-0 left-0 w-full z-10 ">
         <nav class="custom-navbar md:flex md:justify-between flex-col md:flex-row items-center p-4 relative  ">
             <div class="navbar w-full flex items-center justify-between">
                 <!-- logo -->
@@ -22,7 +22,7 @@
                 <!-- End of Logo -->
 
                 <!-- Hamberger menu in Mobile Version -->
-                <div class="hamberger-menu-section block md:hidden cursor-pointer">
+                <div class="hamberger-menu-section block md:hidden cursor-pointer" id="hamberger-menu-section">
                     <div class="hamberger-menu flex flex-col gap-2 ">
                         <div class="line line-1 w-9 h-1 bg-primary"></div>
                         <div class="line line-2 w-9 h-1 bg-primary"></div>
@@ -36,7 +36,7 @@
                 <!-- navbar -->
                 <ul
                     class="nav-links overflow-hidden  items-center gap-5 hidden md:flex  flex-row justify-center  text-primary    my-5 md:my-0 text-lg">
-                    <li class=""><a href="" class="">Heroes</a>
+                    <li class=""><a href="#heroes" class="">Heroes</a>
                     </li>
                     <li><a href="" class="">Gallery</a></li>
                     <li><a href="" class="">Store</a></li>
@@ -55,7 +55,7 @@
 
     <section class="hero flex  items-center justify-center">
         <div class="hero-logo ">
-            <img src="../images/hero-logo.png" alt="Dragon Logo" class="hero-logo pt-8 ">
+            <img src="../images/hero-logo.png" alt="Dragon Logo" class="hero-logo-img pt-8 ">
         </div>
     </section>
 
@@ -70,12 +70,12 @@
 
 
     <!-- Heroes Section -->
-    <section class="heroes">
+    <section class="heroes" id="heroes">
         <div class="heroes-content">
             <!-- Description -->
-            <div class="description">
+            <div class="description-heroes container mx-auto mb-16">
                 <h2 class="title-desc">NOW WE'VE COME FULL CIRCLE</h2>
-                <p class="text-desc">
+                <p class="text-desc relative w-full lg:w-3/6">
                     A smokescreen covered their continuous blinks towards the outskirts of the great
                     kingdom, until the cathedral was the only thing clearly visible. Along the way, they could sense the
                     great shadow of a Dragon, watching their every step. Then, the voices of survivors seeking revenge
@@ -86,54 +86,69 @@
             </div>
 
             <!-- Heroes Preview -->
-            <div class="Heroes-introduce">
-                <h2 class="title-intro">CHOOSE YOUR HERO</h2>
+            <div class="Heroes-introduce overflow-x-hidden text-center w-full mx-auto ">
+                <h2 class="title-intro py-2">CHOOSE YOUR HERO</h2>
 
-                <div class="heroes-preview flex flex-col gap-5">
-                    <div class="hero-1">
-                        <a href="#">
-                            <img src="../images/hero-1.jpg" alt="Hero>" class="hero-img">
-                            <h3 class="hero-name"></h3>
-                            <p class="hero-desc">
-                                Aleister, the former demonlord, is always looking at others bearing a malefic grin upon
-                                his twisted visage, harnessing all the power he can muster as he directs bolts of pure
-                                chaos towards his foes.
-                            </p>
-                        </a>
+                <div class="heroes-preview flex flex-col lg:flex-row  items-stretch justify-center  gap-y-28">
+                    <div class="hero-card hero-1">
+                        <div class="model cursor-pointer ">
+                            <img src="../images/character-1.jpg" alt="Hero>" class="hero-img ">
+                            <h2 class="hero-name text-2xl ">Aleister</h2>
+                            <div class="hero-desc-container">
+                                <p class="hero-desc  ">
+                                    Aleister, the former demonlord, is always looking at others bearing a malefic grin
+                                    upon
+                                    his twisted visage, harnessing all the power he can muster as he directs bolts of
+                                    pure
+                                    chaos towards his foes.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="hero-2">
-                        <a href="#">
-                            <img src="../images/hero-1.jpg" alt="Hero>" class="hero-img">
-                            <h3 class="hero-name"></h3>
-                            <p class="hero-desc">
-                                Aleister, the former demonlord, is always looking at others bearing a malefic grin upon
-                                his twisted visage, harnessing all the power he can muster as he directs bolts of pure
-                                chaos towards his foes.
-                            </p>
-                        </a>
+                    <div class="hero-card hero-2">
+                        <div class="model cursor-pointer ">
+                            <img src="../images/character-2.jpg" alt="Hero>" class="hero-img ">
+                            <h2 class="hero-name  text-2xl">hector</h2>
+                            <div class="hero-desc-container">
+                                <p class="hero-desc">
+                                    The only place Hecate feels safe is total Darkness, where she envelopes herself and
+                                    thrives, until it totally consumes her existence. Until that strange familiar odor
+                                    which
+                                    vanished, reappears and stabs you - in the Dark.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="hero-3">
-                        <a href="#">
-                            <img src="../images/hero-1.jpg" alt="Hero>" class="hero-img">
-                            <h3 class="hero-name"></h3>
-                            <p class="hero-desc">
-                                Aleister, the former demonlord, is always looking at others bearing a malefic grin upon
-                                his twisted visage, harnessing all the power he can muster as he directs bolts of pure
-                                chaos towards his foes.
-                            </p>
-                        </a>
+                    <div class="hero-card hero-3">
+                        <div class="model cursor-pointer ">
+                            <img src="../images/character-3.jpg" alt="Hero>" class="hero-img ">
+                            <h2 class="hero-name text-2xl ">Theregar</h2>
+                            <div class="hero-desc-container">
+                                <p class="hero-desc">
+                                    Theregar's smile looks intimidating as it is, yet is amplified by the fel green hue
+                                    of
+                                    the enchantments he is preparing: As he deflects his attackers, his foes are
+                                    enlightened
+                                    by his immense control of the Shadows...
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="hero-4">
-                        <a href="#">
-                            <img src="../images/hero-1.jpg" alt="Hero>" class="hero-img">
-                            <h3 class="hero-name"></h3>
-                            <p class="hero-desc">
-                                Aleister, the former demonlord, is always looking at others bearing a malefic grin upon
-                                his twisted visage, harnessing all the power he can muster as he directs bolts of pure
-                                chaos towards his foes.
-                            </p>
-                        </a>
+                    <div class="hero-card hero-4">
+                        <div class="model cursor-pointer ">
+                            <img src="../images/character-4.jpg" alt="Hero>" class="hero-img ">
+                            <h2 class="hero-name text-2xl ">Roth</h2>
+                            <div class="hero-desc-container">
+                                <p class="hero-desc">
+                                    Void claimed all in the Halls of Reflection as Roth rised from the Stone, his voice
+                                    echoing again in the sultry darkness. His enemies fallen, their eyesight blurred,
+                                    their
+                                    powers escaping their body as he consumed their souls...
+                                </p>
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
@@ -142,24 +157,48 @@
         </div>
 
         <!-- Preview Hero Model & Info -->
-        <div class="hero-model-info">
+        <div class="hero-model-info  ">
+
+
             <!-- Hero model -->
-            <div class="hero-model">
+            <div class="hero-model bg-white/20 w-1/3 flex items-center flex-col relative">
+                <!-- Borders -->
+                <span class="border-corner border-model-top-left"></span>
+                <span class="border-corner border-model-top-right"></span>
+                <span class="border-corner border-model-bottom-left"></span>
+                <span class="border-corner border-model-bottom-right"></span>
+
+                <span class="border-side  border-model-top"></span>
+                <span class="border-side border-model-bottom"></span>
+                <span class="border-side border-model-right"></span>
+                <span class="border-side border-model-left"></span>
+
+
                 <!-- Hero model title -->
-                <div class="title_hero-model">
-                    <h4 class="title-model">Hero Name: </h4>
+                <div class="title_hero-model  w-full py-10 border-b-2 border-black relative">
+                    <h4 class="title-model text-2xl text-primary">Hero Name: </h4>
+                    <span class="close-model cursor-pointer text-primary absolute top-5 right-8">x</span>
                 </div>
+
                 <!-- Hero model info -->
                 <div class="info_hero-model">
-                    <img src="../images/hero-model.png" alt="Hero Model" class="hero-model-img">
+                    <img src="../images/character-1.jpg" alt="Hero Model" class="hero-model-img py-8">
                     <!-- stats -->
-                    <ul class="stats-info">
+                    <ul class="stats-info pb-14">
                         <li class="Strength">Strength: </li>
                         <li class="Dexterity">Dexterity: </li>
                         <li class="Agility">Agility: </li>
                         <li class="Willpower">Willpower: </li>
                         <li class="Intelligence">Intelligence: </li>
                     </ul>
+                </div>
+                <!-- download button -->
+                <div class="download_hero-model ">
+                    <a href="https://www.google.com" class="download-btn  relative">
+                        <span class="download-left-side"></span>
+                        <span class="download-mid-side ">Download & Play Now</span>
+                        <span class="download-right-side"></span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -168,7 +207,19 @@
     <!-- End of Heroes Section -->
 
 
+
+    <!-- Divider -->
+    <div class="divider ">
+        <hr class="divider-rule">
+
+    </div>
+    <!-- End of Divider -->
+
+
+
+    <!-- <script src="script.js"></script> -->
     <script src="script.js"></script>
+    <script src="test.js"></script>
 </body>
 
 </html>
