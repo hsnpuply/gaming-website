@@ -5,6 +5,7 @@ const nav_links = document.querySelector('.nav-links');
 const hero_logo = document.querySelector('.hero-logo-img');
 const honored_hero__name = document.querySelector('#honored-hero_name');
 const swiper_wrapper = document.querySelector('#swiper-wrapper');
+const heroes_preview  = document.querySelector('#heroes-preview ');
 
 const card_model = document.querySelector('.hero-model-info');
 const close_model = document.querySelector('#close-model');
@@ -70,7 +71,37 @@ const heroes_stats = [
 
     }
 ]
+const heroes_models=[
+    {
+        id:1,
+        img:'../images/character-1.jpg',
+        name:'Aleister',
+        desc:'Aleister, the former demonlord, is always looking at others bearing a malefic grin upon his twisted visage, harnessing all the power he can muster as he directs bolts of pure chaos towards his foes.',
+    },
 
+    {
+        id:2,
+        img:'../images/character-2.jpg',
+        name:'HECATE',
+        desc:'The only place Hecate feels safe is total Darkness, where she envelopes herself and thrives, until it totally consumes her existence. Until that strange familiar odor which vanished, reappears and stabs you - in the Dark.',
+    },
+
+    {
+        id:3,
+        img:'../images/character-3.jpg',
+        name:'THEREGAR',
+        desc:`Theregar's smile looks intimidating as it is, yet is amplified by the fel green hue of the enchantments he is preparing: As he deflects his attackers, his foes are enlightened by his immense control of the Shadows...`
+    },
+
+    {
+        id:4,
+        img:'../images/character-4.jpg',
+        name:'ROTH',
+        desc:'Void claimed all in the Halls of Reflection as Roth rised from the Stone, his voice echoing again in the sultry darkness. His enemies fallen, their eyesight blurred, their powers escaping their body as he consumed their souls...'
+    },
+
+
+]
 const gallery=[
     {
         id:1,
@@ -121,11 +152,6 @@ const gallery=[
         title:"Only moments remain before the Halls of Reflection burst into light...",
     },
 
-
-
-
-
-
 ]
 
 window.addEventListener('load',()=>{
@@ -155,6 +181,36 @@ function makeGallery() {
 
     swiper_wrapper.innerHTML = swiperHtml;
   }
+
+  makeHeroes()
+  function makeHeroes() {
+      if (!heroes_models || heroes_models.length === 0) {
+        console.error("Heroes are empty or not defined");
+        return;
+      }
+
+      let swiperHtml = "";
+      for (let i = 0; i < heroes_models.length; i++) {
+        swiperHtml += `
+        <div class="hero-card hero-${heroes_models[i].id}">
+        <div class="model cursor-pointer ">
+            <img src="${heroes_models[i].img}" alt="Hero>" class="hero-img ">
+            <h2 class="hero-name text-2xl ">${heroes_models[i].name}</h2>
+            <div class="hero-desc-container">
+                <p class="hero-desc">
+                ${heroes_models[i].desc}
+                </p>
+            </div>
+
+        </div>
+    </div>
+        `;
+      }
+
+      heroes_preview.innerHTML = swiperHtml;
+    }
+
+
 document.querySelectorAll('.hero-card').forEach((card,i)=>{
     card.addEventListener('click',()=>{
         card_model.classList.add('active');
@@ -205,3 +261,6 @@ document.addEventListener('click', (event) => {
 close_model.addEventListener('click',()=>{
     card_model.classList.remove('active');
 })
+
+
+// Tar tamizi kolle project
