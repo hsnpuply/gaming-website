@@ -10,9 +10,7 @@ const heroes_preview  = document.querySelector('#heroes-preview ');
 const card_model = document.querySelector('.hero-model-info');
 const close_model = document.querySelector('#close-model');
 const hero__model = document.querySelector('.hero-model');
-
-// test
-let testP = document.getElementById('test')
+const title_model__product = document.querySelector('#title-model_product');
 
 
 
@@ -154,6 +152,27 @@ const gallery=[
 
 ]
 
+const platforms=[
+    {
+        id:1,
+        name:'AppStore - iOS Version',
+        img:'../images/store/apple-platform.jpg',
+        price:"€ 8.99",
+    },
+    {
+        id:2,
+        name:'GooglePlay - Android Version',
+        img:'../images/store/google_play-store.jpg',
+        price:"€ 6.99",
+    },
+    {
+        id:3,
+        name:'Steam - PC Version',
+        img:'../images/store/steam-store.jpg',
+        price:"€ 9.99",
+    },
+]
+
 window.addEventListener('load',()=>{
     hero_logo.classList.add('onload')
 
@@ -171,7 +190,7 @@ function makeGallery() {
         <div class="swiper-slide" id="swiper-${gallery[i].id}">
           <img src="${gallery[i].img}" alt="" class="swiper-img">
           <p
-            class="swiper-desc w-full hidden sm:block text-xs text-center bottom-8 md:bottom-10 md:text-xl  lg:bottom-16 lg:text-2xl"
+            class="swiper-desc w-full hidden sm:block text-xs text-center bottom-8 md:bottom-10 md:text-lg  lg:bottom-16 lg:text-2xl"
           >
             ${gallery[i].title}
           </p>
@@ -211,6 +230,9 @@ function makeGallery() {
     }
 
 
+
+
+
 document.querySelectorAll('.hero-card').forEach((card,i)=>{
     card.addEventListener('click',()=>{
         card_model.classList.add('active');
@@ -229,6 +251,24 @@ document.querySelectorAll('.hero-card').forEach((card,i)=>{
 
         `
         honored_hero__name.innerHTML= ` ${heroes_stats[i].hero_name}`
+    })
+})
+
+
+
+document.querySelectorAll('.platform').forEach((platform,i)=>{
+    platform.addEventListener('click',()=>{
+        card_model.classList.add('active');
+        info_hero__model.innerHTML= `
+
+        <img src="${platforms[i].img}" alt="Hero Model" class="hero-model-img h-[80%] py-2">
+        <!-- stats -->
+        <p class="text-center text-primary text-lg p-2 price-value">${platforms[i].price}</p>
+    </div>
+
+        `
+        honored_hero__name.innerHTML= ` ${platforms[i].name}`
+        title_model__product.innerHTML='Dragonic: '
     })
 })
 
@@ -263,4 +303,3 @@ close_model.addEventListener('click',()=>{
 })
 
 
-// Tar tamizi kolle project

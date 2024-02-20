@@ -193,17 +193,25 @@ h2 {
   margin: 0 auto;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1026px) {
   .hero-img {
     width: 400px;
     /* important */
   }
+  .platform-img {
+    width: 400px;
+    height: 550px;
+  }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1027px) {
   .hero-img {
-    width: 225px !important;
-    height: 225px !important;
+    width: 230px;
+    height: 230px;
+  }
+  .platform-img {
+    width: 330px;
+    height: 465px;
   }
 }
 
@@ -306,7 +314,8 @@ h2 {
   filter: drop-shadow(1px 4px 5px #de9527c7);
   transition: all 1s ease-in-out;
 }
-.stat-value {
+.stat-value,
+.price-value {
   text-shadow: 1px 4px 10px #fca727c7;
   transition: all 0.5s ease-in-out;
   font-weight: bold;
@@ -411,9 +420,6 @@ h2 {
 
 /* Download Model */
 .download_hero-model {
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.55)),
     url(../images/dark_wall.png);
   width: 100%;
@@ -649,4 +655,52 @@ h2 {
   padding: 10px 0;
 }
 
+.platform-info {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.8rem;
+  border-right: 1px solid #3f2f29;
+  border-left: 1px solid #3f2f29;
+  background-color: rgba(24, 10, 7, 0.7);
+}
+.desc-platform {
+  line-height: 19px;
+  transition: color 0.2s;
+  font: normal 16px/1.5 Helvetica, Arial, sans-serif;
+  color: #ad835a;
+}
+.platform-info:hover {
+  border-right: 1px solid #751b1a;
+  border-left: 1px solid #751b1a;
+}
+.title-platform {
+  font-family: "Cinzel Decorative", sans-serif;
+  color: #ecd19a;
+  text-align: left;
+  font-weight: normal;
+  margin: 3px 0 7px;
+  transition: color 0.2s;
+}
+/* platforms card */
+.download-btn-platform {
+  font-family: "Cinzel Decorative", "Palatino Light", Times, Times New Roman,
+    Georgia, serif;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.platform:hover {
+  background-color: #752b1a;
+  box-shadow: 0 0 60px rgba(97, 51, 40, 0.9);
+}
+
+.platform {
+  box-shadow: 0 0 60px rgb(167 32 32 / 33%);
+  transition: background-color 0.2s, box-shadow 0.2s;
+  background-color: #3f2f29;
+  cursor: pointer;
+  padding: 1px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
 /* End of Store Section */
