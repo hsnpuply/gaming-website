@@ -18,8 +18,9 @@
 
 <body class="overflow-x-hidden">
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full z-10 ">
-        <nav class="custom-navbar md:flex md:justify-between flex-col md:flex-row items-center p-4 relative  ">
+    <header class="fixed top-0 left-0 w-full z-10 top-header">
+        <nav
+            class="custom-navbar md:flex md:justify-between flex-col md:flex-row items-center p-4 relative  lg:container ">
             <div class="navbar w-full flex items-center justify-between">
                 <!-- logo -->
                 <a href="#" class="logo-link">
@@ -42,10 +43,10 @@
             <div class="navbar-collapse ">
                 <!-- navbar -->
                 <ul
-                    class="nav-links overflow-hidden  items-center gap-5 hidden md:flex  flex-row justify-center  text-primary    my-5 md:my-0 text-lg">
+                    class="nav-links overflow-hidden  items-center gap-5 hidden md:flex  flex-row justify-center  text-primary  my-5 md:my-0 text-sm lg:text-base xl:text-lg">
                     <li class=""><a href="#heroes" class="">Heroes</a>
                     </li>
-                    <li><a href="" class="">Gallery</a></li>
+                    <li><a href="#gallery" class="">Gallery</a></li>
                     <li><a href="" class="">Store</a></li>
                     <li><a href="" class="">Contact</a></li>
                 </ul>
@@ -77,8 +78,8 @@
 
 
     <!-- Heroes Section -->
-    <section class="heroes" id="heroes">
-        <div class="heroes-content">
+    <section class="heroes " id="heroes">
+        <div class="heroes-content  lg:container ">
             <!-- Description -->
             <div class="description-heroes container mx-auto mb-16">
                 <h2 class="title-desc">NOW WE'VE COME FULL CIRCLE</h2>
@@ -97,6 +98,7 @@
                 <h2 class="title-intro py-2">CHOOSE YOUR HERO</h2>
 
                 <div class="heroes-preview flex flex-col lg:flex-row  items-stretch justify-center  gap-y-28">
+
                     <div class="hero-card hero-1">
                         <div class="model cursor-pointer ">
                             <img src="../images/character-1.jpg" alt="Hero>" class="hero-img ">
@@ -184,8 +186,8 @@
                 <!-- Hero model title -->
                 <div class="title_hero-model  w-full py-10 border-b-2 border-black relative">
                     <h4 class="title-model text-2xl text-primary">Hero Name: <span id="honored-hero_name"></span></h4>
-                    <span class="close-model cursor-pointer text-2xl text-primary absolute top-5 right-8"
-                        id="close-model">x</span>
+                    <span class="close-model  text- cursor-pointer text-2xl text-primary absolute top-5 right-8"
+                        id="close-model ">x</span>
                 </div>
 
                 <!-- Hero model info -->
@@ -217,8 +219,8 @@
 
 
     <!-- Gallery Section -->
-    <section class="gallery py-5">
-        <div class="container-gallery container mx-auto"> <!-- Test container-->
+    <section class="gallery py-5 flex flex-col  " id="gallery">
+        <div class="container-gallery container"> <!-- Test container-->
 
             <!-- Gallery Info -->
             <div class="gallery-info">
@@ -235,41 +237,28 @@
             </div>
 
             <!-- Gallery Swiper -->
-            <div class="my-gallery-framer border-2 border-primary   ">
-                <div class="swiper  h-auto">
+            <div class="my-gallery-framer   mt-20 mb-24 relative  ">
+                <!-- Borders -->
+                <div class="model-corner model-corner-top-right"></div>
+                <div class="model-corner model-corner-top-left"></div>
+                <div class="model-corner model-corner-bottom-right"></div>
+                <div class="model-corner model-corner-bottom-left"></div>
+
+
+                <div class="model-border model-border-top"></div>
+                <div class="model-border model-border-right"></div>
+                <div class="model-border model-border-bottom"></div>
+                <div class="model-border model-border-left"></div>
+
+
+                <!-- Swiper Wrapper -->
+
+                <div class="swiper">
                     <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper" id="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide" id="swiper-1">
-                            <img src="../images/swiper-images/1.jpg" alt="" class="swiper-img">
-                            <p class="swiper-desc">Image description goes here</p>
-                        </div>
-
-                        <div class="swiper-slide" id="swiper-2">
-                            <img src="../images/swiper-images/2.jpg" alt="" class="swiper-img">
-                            <p class="swiper-desc">Image description goes here</p>
-                        </div>
 
 
-                        <div class="swiper-slide" id="swiper-3">
-                            <img src="../images/swiper-images/3.jpg" alt="" class="swiper-img">
-                            <p class="swiper-desc">Image description goes here</p>
-                        </div>
-
-                        <div class="swiper-slide" id="swiper-4">
-                            <img src="../images/swiper-images/4.jpg" alt="" class="swiper-img">
-                            <p class="swiper-desc">Image description goes here</p>
-                        </div>
-
-                        <div class="swiper-slide" id="swiper-5">
-                            <img src="../images/swiper-images/5.jpg" alt="" class="swiper-img">
-                            <p class="swiper-desc">Image description goes here</p>
-                        </div>
-
-                        <div class="swiper-slide" id="swiper-6">
-                            <img src="../images/swiper-images/6.jpg" alt="" class="swiper-img">
-                            <p class="swiper-desc">Image description goes here</p>
-                        </div>
 
                     </div>
                     <!-- If we need pagination -->
@@ -287,6 +276,16 @@
         </div>
     </section>
     <!-- End of Gallery Section -->
+
+    <!-- Divider -->
+    <div class="divider ">
+        <hr class="divider-rule">
+
+    </div>
+    <!-- End of Divider -->
+
+
+    
 
 
     <script src="script.js"></script>
@@ -309,7 +308,7 @@
                 el: '.swiper-pagination',
                 clickable: true,
                 bulletClass: 'my-bullet',
-                bulletActiveClass:'my-bullet-active'
+                bulletActiveClass: 'my-bullet-active'
 
             },
 

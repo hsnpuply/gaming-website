@@ -4,6 +4,7 @@ const info_hero__model = document.querySelector('.info_hero-model');
 const nav_links = document.querySelector('.nav-links');
 const hero_logo = document.querySelector('.hero-logo-img');
 const honored_hero__name = document.querySelector('#honored-hero_name');
+const swiper_wrapper = document.querySelector('#swiper-wrapper');
 
 const card_model = document.querySelector('.hero-model-info');
 const close_model = document.querySelector('#close-model');
@@ -14,9 +15,6 @@ let testP = document.getElementById('test')
 
 
 
-window.addEventListener('load',()=>{
-    hero_logo.classList.add('onload')
-})
 
 const heroes_stats = [
     {
@@ -73,8 +71,90 @@ const heroes_stats = [
     }
 ]
 
+const gallery=[
+    {
+        id:1,
+        img:'../images/swiper-images/1.jpg',
+        title:"The Hall of Reflections is one of three halls in the Tower of Brunj",
+    },
+    {
+        id:2,
+        img:'../images/swiper-images/2.jpg',
+        title:"The Dragon's voice boomed throughout the kingdom...",
+    },
+
+    {
+        id:3,
+        img:'../images/swiper-images/3.jpg',
+        title:"She would give them a piece of their own personal hell...",
+    },
+
+    {
+        id:4,
+        img:'../images/swiper-images/4.jpg',
+        title:"The Enlightened's charred husk remained atop the castle's walls...",
+    },
+
+    {
+        id:5,
+        img:'../images/swiper-images/5.jpg',
+        title:"Void claimed all in the Halls of Reflection...",
+    },
 
 
+    {
+        id:6,
+        img:'../images/swiper-images/6.jpg',
+        title:"Theregar deflected another attack, towering atop the crambled stairs...",
+    },
+
+
+        {
+        id:7,
+        img:'../images/swiper-images/7.jpg',
+        title:"The soul fragments met, imprisoning life in the midst of the Void...",
+    },
+
+    {
+        id:8,
+        img:'../images/swiper-images/8.jpg',
+        title:"Only moments remain before the Halls of Reflection burst into light...",
+    },
+
+
+
+
+
+
+]
+
+window.addEventListener('load',()=>{
+    hero_logo.classList.add('onload')
+
+})
+makeGallery()
+function makeGallery() {
+    if (!gallery || gallery.length === 0) {
+      console.error("gallery is empty or not defined");
+      return;
+    }
+
+    let swiperHtml = "";
+    for (let i = 0; i < gallery.length; i++) {
+      swiperHtml += `
+        <div class="swiper-slide" id="swiper-${gallery[i].id}">
+          <img src="${gallery[i].img}" alt="" class="swiper-img">
+          <p
+            class="swiper-desc w-full hidden sm:block text-xs text-center bottom-8 md:bottom-10 md:text-xl  lg:bottom-16 lg:text-2xl"
+          >
+            ${gallery[i].title}
+          </p>
+        </div>
+      `;
+    }
+
+    swiper_wrapper.innerHTML = swiperHtml;
+  }
 document.querySelectorAll('.hero-card').forEach((card,i)=>{
     card.addEventListener('click',()=>{
         card_model.classList.add('active');
