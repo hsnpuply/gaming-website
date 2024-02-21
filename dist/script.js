@@ -6,6 +6,8 @@ const hero_logo = document.querySelector('.hero-logo-img');
 const honored_hero__name = document.querySelector('#honored-hero_name');
 const swiper_wrapper = document.querySelector('#swiper-wrapper');
 const heroes_preview  = document.querySelector('#heroes-preview ');
+const platforms_store = document.querySelector('.platforms-store');
+const store_name = document.querySelector('#store-name');
 
 const card_model = document.querySelector('.hero-model-info');
 const close_model = document.querySelector('#close-model');
@@ -173,6 +175,36 @@ const platforms=[
     },
 ]
 
+const platform_cards=[
+    {
+        id:1,
+        title:'IOS Version',
+        desc:`Available both for Apple iPhone & Apple iPad, specially designed for Apple iPad Pro & Force Touch.`,
+        img:'../images/store/apple-platform.jpg',
+        icon:'fa-apple',
+        custom_class:'platform-apple-store',
+        store_name:'AppleStore |'
+    },
+    {
+        id:2,
+        title:'Android Version',
+        desc:`Incorporating the finest tweaks for absolutely best performance and stellar graphics in all devices.`,
+        img:'../images/store/google_play-store.jpg',
+        icon:'fa-android',
+        custom_class:'platform-google_play-store',
+        store_name:'GooglePlay |'
+    },
+    {
+        id:3,
+        title:'PC & MAC Version',
+        desc:`The zenith of graphics, the PC & Mac versions offer a truly unforgetable experience.`,
+        img:'../images/store/steam-store.jpg',
+        icon:'fa-steam',
+        custom_class:'platform-steam-store',
+        store_name:'Steam |'
+    },
+]
+
 window.addEventListener('load',()=>{
     hero_logo.classList.add('onload')
 
@@ -227,6 +259,45 @@ function makeGallery() {
       }
 
       heroes_preview.innerHTML = swiperHtml;
+    }
+
+    makePlatform_stores()
+    function makePlatform_stores(){
+            if (!platform_cards || platform_cards.length === 0) {
+              console.error("platforms are  empty or not defined");
+              return;
+            }
+
+            let text_variable = "";
+            for (let i = 0; i < platform_cards.length; i++) {
+              text_variable += `
+              <div class="platform ${platform_cards[i].custom_class}">
+              <div class="platform-imag-container relative  ">
+                  <img src="${platform_cards[i].img}" alt="Apple-Store" class="platform-img">
+                  <div
+                      class="absolute bottom-0 left-0 text-center text-lg platform-info   text-white flex items-start justify-center flex-col w-full m">
+                      <h3 class="title-platform text-xl font-bold px-5 p-2">${platform_cards[i].title}</h3>
+                      <p class="desc-platform pb-5 text-black font-bold text-left px-5">
+
+                      ${platform_cards[i].desc}
+
+                      </p>
+                  </div>
+              </div>
+              <div class="platform-download w-full">
+                  <a href="https://www.google.com" class="download-btn download-btn-platform  relative">
+                      <span class="download-left-side"></span>
+                      <span class="download-mid-side "><span class="store-name" id="store-name">${platform_cards[i].store_name}</span><span class="platform-icon"><i
+                                  class="fab ${platform_cards[i].icon} px-2"></i></span></span>
+                      <span class="download-right-side"></span>
+                  </a>
+
+              </div>
+          </div>
+              `;
+            }
+
+            platforms_store.innerHTML = text_variable;
     }
 
 

@@ -202,6 +202,9 @@ h2 {
     width: 400px;
     height: 550px;
   }
+  .developer-img {
+    width: 380px;
+  }
 }
 
 @media (min-width: 1027px) {
@@ -212,6 +215,9 @@ h2 {
   .platform-img {
     width: 330px;
     height: 465px;
+  }
+  .developer-img {
+    width: 330px;
   }
 }
 
@@ -704,3 +710,69 @@ h2 {
   margin-bottom: 25px;
 }
 /* End of Store Section */
+
+/* developers */
+.developers {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.25)),
+    url(../images/developers_bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  box-shadow: inset 0 -10px 50px #000000;
+  color: #ffffff;
+  background-attachment: fixed;
+}
+
+.developer-qoute {
+  border: none;
+  color: #fffcd9;
+  font-family: "Palatino Light", Times, Times New Roman, Georgia, serif;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.developer-qoute::after {
+  content: "\201d";
+  font-weight: 100;
+  position: absolute;
+  border: none;
+  color: #af4217;
+  font-family: "Palatino Light", Times, Times New Roman, Georgia, serif;
+  font-size: 150;
+  line-height: 30px;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  font-size: 300%;
+  text-align: center;
+}
+.developer-qoute::before {
+  content: "\201c";
+  font-weight: 100;
+  position: absolute;
+  border: none;
+  color: #af4217;
+  font-family: "Palatino Light", Times, Times New Roman, Georgia, serif;
+  font-size: 15px;
+  line-height: 30px;
+  margin-left: -2rem;
+  font-size: 300%;
+  text-align: center;
+}
+
+.developer-info {
+  color: #ecd19a;
+  height: 32px;
+  line-height: 32px;
+  text-transform: uppercase;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+.developer-img {
+  border: 2px solid #752b1a;
+  border-radius: 5px;
+}
+
+
+/* End of Developers ♥ */

@@ -47,7 +47,7 @@
             <div class="navbar-collapse ">
                 <!-- navbar -->
                 <ul
-                    class="nav-links overflow-hidden  items-center gap-5 hidden md:flex  flex-row justify-center  text-primary  my-5 md:my-0 text-sm lg:text-base xl:text-lg">
+                    class="nav-links overflow-hidden  items-center gap-5 hidden md:flex  flex-row justify-center  text-primary  my-5 md:my-0 text-base lg:text-lg xl:text-xl">
                     <li class=""><a href="#heroes" class="">Heroes</a>
                     </li>
                     <li><a href="#gallery" class="">Gallery</a></li>
@@ -128,7 +128,9 @@
 
                     <!-- Hero model title -->
                     <div class="title_hero-model  w-full py-10 border-b-2 border-black relative">
-                        <h4 class="title-model text-2xl text-primary" id="title-modedl"> <span class="title-model_product" id="title-model_product"></span> <span id="honored-hero_name"></span>
+                        <h4 class="title-model text-2xl text-primary" id="title-modedl"> <span
+                                class="title-model_product" id="title-model_product"></span> <span
+                                id="honored-hero_name"></span>
                         </h4>
                         <span class="close-model  text- cursor-pointer text-2xl text-primary absolute top-5 right-8"
                             id="close-model ">x</span>
@@ -246,33 +248,10 @@
 
         <!-- Platform Store -->
         <!-- Game in Diffrent Platforms -->
-        <div
-            class="platforms-store w-full flex flex-col lg:flex-row items-center justify-center gap-x-24 gap-y-20 container">
+        <div class="platforms-store w-full flex flex-col lg:flex-row items-center justify-center gap-x-24 gap-y-20 container"
+            id="platforms-store">
 
-            <div class="platform platform-apple-store">
-                <div class="platform-imag-container relative  ">
-                    <img src="../images/store/apple-platform.jpg" alt="Apple-Store" class="platform-img">
-                    <div
-                        class="absolute bottom-0 left-0 text-center text-lg platform-info   text-white flex items-start justify-center flex-col w-full m">
-                        <h3 class="title-platform text-xl font-bold px-5 p-2">IOS VERSION</h3>
-                        <p class="desc-platform pb-5 text-black font-bold text-left px-5">
 
-                            Available both for Apple iPhone & Apple iPad, specially designed for Apple iPad Pro & Force
-                            Touch.
-
-                        </p>
-                    </div>
-                </div>
-                <div class="platform-download w-full">
-                    <a href="https://www.google.com" class="download-btn download-btn-platform  relative">
-                        <span class="download-left-side"></span>
-                        <span class="download-mid-side ">AppleStore |<span class="platform-icon"><i
-                                    class="fab fa-apple px-2"></i></span></span>
-                        <span class="download-right-side"></span>
-                    </a>
-
-                </div>
-            </div>
             <div class="platform platform-google_play-store">
                 <div class="platform-imag-container relative  ">
                     <img src="../images/store/google_play-store.jpg" alt="Apple-Store" class="platform-img">
@@ -290,8 +269,8 @@
                 <div class="platform-download w-full">
                     <a href="https://www.google.com" class="download-btn download-btn-platform  relative">
                         <span class="download-left-side"></span>
-                        <span class="download-mid-side ">AppleStore |<span class="platform-icon"><i
-                                    class="fab fa-apple px-2"></i></span></span>
+                        <span class="download-mid-side "><span class="store-name" id="store-name">AppleStore
+                                |</span><span class="platform-icon"><i class="fab fa-apple px-2"></i></span></span>
                         <span class="download-right-side"></span>
                     </a>
 
@@ -326,6 +305,68 @@
 
     </section>
     <!-- End of Store -->
+
+
+
+    <!-- Divider -->
+    <div class="divider ">
+        <hr class="divider-rule">
+
+    </div>
+    <!-- End of Divider -->
+
+
+    <!-- developers -->
+    <section class="developers py-5" id="developers">
+        <div class="developers-container container">
+            <h2 class="developers-title">THE INSIGHTS OF DARKNESS</h2>
+
+            <div class="devleopers-team flex flex-col lg:flex-row gap-x-24 gap-y-20  items-center justify-center my-16">
+                <div class="developer-card flex flex-col items-center gap-5 py-5">
+                    <img src="../images/developer-1.jpg" alt="" class="developer-img my-5">
+                    <blockquote class="developer-qoute relative text-center">When people comment on Dragonic's
+                        difficulty, I always
+                        reply
+                        'The armor of a true knight, is not shiny - only battle worn'.</blockquote>
+                    <p class="developer-info"><span class="developer-name font-bold text-xl">Hu Shun Xiao</span> <span
+                            class="developer-position text-xl">, Lead
+                            Developer</span></p>
+
+                </div>
+
+                <div class="developer-card  flex flex-col items-center gap-5 py-5">
+                    <img src="../images/developer-2.jpg" alt="" class="developer-img my-5">
+                    <blockquote class="developer-qoute relative text-center">When people comment on Dragonic's
+                        There is nothing - literally - nothing more satisfying for a VFX artist to see his work giving
+                        life to a luscious 3D environment.</blockquote>
+                    <p class="developer-info"><span class="developer-name font-bold text-xl">ROB AUGUSTE
+                        </span> <span class="developer-position text-xl">, SENIOR VFX ARTIST</span></p>
+
+                </div>
+
+                <div class="developer-card  flex flex-col items-center gap-5 py-5">
+                    <img src="../images/developer-3.jpg" alt="" class="developer-img my-5">
+                    <blockquote class="developer-qoute relative text-center">When people comment on Dragonic's
+                        People ask me why I work such long hours and I find myself quoting the same thing - I simply
+                        adore making games.</blockquote>
+                    <p class="developer-info"><span class="developer-name font-bold text-xl">ANTONIO KIRILL
+
+                        </span> <span class="developer-position text-xl">, LEAD GAME DESIGNER</span></p>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider ">
+        <hr class="divider-rule">
+
+    </div>
+    <!-- End of Divider -->
+
 
 
     <script src="script.js"></script>
