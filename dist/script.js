@@ -14,6 +14,16 @@ const close_model = document.querySelector('#close-model');
 const hero__model = document.querySelector('.hero-model');
 const title_model__product = document.querySelector('#title-model_product');
 
+const choice = document.querySelector('.choice');
+const newsletter = document.querySelector('#newsletter');
+
+choice.addEventListener('click',()=>{
+    choice.classList.toggle('activated')
+
+    choice.classList.contains('activated') ? newsletter.checked=true : newsletter.checked=false;
+
+})
+
 
 
 

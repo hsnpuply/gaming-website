@@ -47,12 +47,12 @@
             <div class="navbar-collapse ">
                 <!-- navbar -->
                 <ul
-                    class="nav-links overflow-hidden  items-center gap-5 hidden md:flex  flex-row justify-center  text-primary  my-5 md:my-0 text-base lg:text-lg xl:text-xl">
+                    class="nav-links overflow-hidden  items-center gap-5 hidden md:flex  flex-row justify-center  text-primary  my-5 md:my-0 text-base lg:text-lg ">
                     <li class=""><a href="#heroes" class="">Heroes</a>
                     </li>
                     <li><a href="#gallery" class="">Gallery</a></li>
                     <li><a href="#store" class="">Store</a></li>
-                    <li><a href="" class="">Contact</a></li>
+                    <li><a href="#contact" class="">Contact</a></li>
                 </ul>
             </div>
 
@@ -235,7 +235,7 @@
     <!-- Store -->
     <section class="store" id="store">
         <!-- Store Info -->
-        <div class="store-container container">
+        <div class="store-container container ">
             <div class="store-info mb-20">
                 <h2 class="store_title">CHOOSE YOUR WEAPON</h2>
                 <p class="store_desc">
@@ -252,7 +252,7 @@
             id="platforms-store">
 
 
-            <div class="platform platform-google_play-store">
+            <div class="platform platform-google_play-store ">
                 <div class="platform-imag-container relative  ">
                     <img src="../images/store/google_play-store.jpg" alt="Apple-Store" class="platform-img">
                     <div
@@ -321,7 +321,7 @@
         <div class="developers-container container">
             <h2 class="developers-title">THE INSIGHTS OF DARKNESS</h2>
 
-            <div class="devleopers-team flex flex-col lg:flex-row gap-x-24 gap-y-20  items-center justify-center my-16">
+            <div class="devleopers-team flex flex-col lg:flex-row gap-x-20 gap-y-20  items-center justify-center my-16">
                 <div class="developer-card flex flex-col items-center gap-5 py-5">
                     <img src="../images/developer-1.jpg" alt="" class="developer-img my-5">
                     <blockquote class="developer-qoute relative text-center">When people comment on Dragonic's
@@ -334,7 +334,7 @@
 
                 </div>
 
-                <div class="developer-card  flex flex-col items-center gap-5 py-5">
+                <div class="developer-card flex flex-col items-center gap-5 py-5">
                     <img src="../images/developer-2.jpg" alt="" class="developer-img my-5">
                     <blockquote class="developer-qoute relative text-center">When people comment on Dragonic's
                         There is nothing - literally - nothing more satisfying for a VFX artist to see his work giving
@@ -344,7 +344,7 @@
 
                 </div>
 
-                <div class="developer-card  flex flex-col items-center gap-5 py-5">
+                <div class="developer-card flex flex-col items-center gap-5 py-5">
                     <img src="../images/developer-3.jpg" alt="" class="developer-img my-5">
                     <blockquote class="developer-qoute relative text-center">When people comment on Dragonic's
                         People ask me why I work such long hours and I find myself quoting the same thing - I simply
@@ -357,6 +357,134 @@
             </div>
 
 
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="divider ">
+        <hr class="divider-rule">
+
+    </div>
+    <!-- End of Divider -->
+
+
+    <section class="contact" id="contact">
+        <div class="contact-container container ">
+            <!-- Contact info -->
+            <div class="contact-info container">
+                <h2 class="contact-title pt-6">SUMMON US</h2>
+                <p class="contact-desc">Whether your mind echoes with questions, or your soul seeks for answers untold,
+                    stay awhile and write us down your request. If a bug is what bothers you, it shall be purged into
+                    eternity via your precious feedback. If a career in warmonging is what you long for, indulge us with
+                    a first handshake and be welcome to visit us in our den, located right in the midst of the ancient
+                    city of Athens. By all means, if you wish to present us with a review only a true Master gamer
+                    would, enlighten us so we may bask in its light.
+                    <br><br>
+                    <span>By all means, contact us. We are always listening...
+                    </span>
+                </p>
+            </div>
+
+
+            <!-- contact form & Location -->
+            <div class="contact-us flex flex-col lg:flex-row   lg:items-start justify-center gap-12 mt-28 px-5">
+                <!-- form -->
+                <div class="contact-form h-full flex flex-col items-stretch lg:items-center ">
+                    <form action="#" method="post" class="contact-form  flex flex-col justify-center gap-y-6">
+                        <div class="name-form flex justify-start items-center">
+                            <div class="label">
+                                <label for="name">Name:</label>
+                            </div>
+                            <div class="input">
+                                <input type="text" name='name' id="name">
+                            </div>
+                        </div>
+                        <div class="email-form flex justify-start items-center">
+                            <div class="label">
+                                <label for="email">Email:</label>
+                            </div>
+                            <div class="input self-start">
+                                <input type="email" name='email' id="email">
+                            </div>
+                        </div>
+                        <div class="reason-form flex justify-start items-center">
+                            <div class="label">
+                                <label for="reason">Reason:</label>
+                            </div>
+                            <div class="input">
+                                <select name="reason" id="reason">
+                                    <option value="career" selected>Career</option>
+                                    <option value="submit_Bug">Submit Bug</option>
+                                    <option value="testimonial">Testimonial</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="how-reach-form flex justify-start items-center">
+                            <div class="label">
+                                <label for="how-reach">You Found us:</label>
+                            </div>
+                            <div class="input">
+                                <select name="how-reach" id="how-reach">
+                                    <option value="search_engine" selected>Search Engine</option>
+                                    <option value="friend">Friend</option>
+                                    <option value="free_promotion">Free Promotion</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="newsletter-form flex justify-start items-center">
+                            <div class="label">
+                                <label for="newsletter">Newsletter:</label>
+                            </div>
+                            <div class="input flex items-center">
+                                <div class="choice cursor-pointer">
+                                    <div class="text-choice flex items-center justify-center px-4">
+                                        <span class="text-sm">Of course!</span>
+                                    </div>
+                                    <input type="checkbox" name="newsletter" id="newsletter"
+                                        class=" my_checkbox opacity-0 ">
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="message-form flex  items-center">
+                            <div class="label self-start">
+                                <label for="message">Message:</label>
+                            </div>
+                            <div class="input">
+                                <textarea placeholder="Your message..." cols="22" rows="6"></textarea>
+                            </div>
+                        </div>
+                        <div class="button-form flex  ">
+                            <div class="label opacity-0">
+                                <p>Submit Button</p>
+                            </div>
+                            <div class="submit_button input ">
+                                <button type="submit"
+                                    class="rounded-sm text-xl flex items-center justify-center">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Map Location  -->
+                <div class="contact-map ">
+
+                    <div id="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.2438824332835!2d2.3777520884050882!3d48.89168912446702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66dfccabcd84d%3A0x14476827e9206c0f!2sEpic%20games!5e0!3m2!1sen!2sde!4v1708535399581!5m2!1sen!2sde"
+                            allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            class="px-5 w-[500px] h-[340px] lg:w-[750px] lg:h-[450px]"></iframe>
+                    </div>
+
+
+                </div>
+            </div>
+
+            </form>
         </div>
     </section>
 
