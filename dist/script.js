@@ -1,6 +1,7 @@
 const hamberger_menu_link = document.querySelector('.hamberger-menu-section');
 const hamberger_menu_icon = document.querySelector('.hamberger-menu');
 const info_hero__model = document.querySelector('.info_hero-model');
+const top_header = document.querySelector('.top-header');
 const nav_links = document.querySelector('.nav-links');
 const hero_logo = document.querySelector('.hero-logo-img');
 const honored_hero__name = document.querySelector('#honored-hero_name');
@@ -8,6 +9,7 @@ const swiper_wrapper = document.querySelector('#swiper-wrapper');
 const heroes_preview  = document.querySelector('#heroes-preview ');
 const platforms_store = document.querySelector('.platforms-store');
 const store_name = document.querySelector('#store-name');
+const heroes = document.querySelector('#heroes');
 
 const card_model = document.querySelector('.hero-model-info');
 const close_model = document.querySelector('#close-model');
@@ -16,6 +18,9 @@ const title_model__product = document.querySelector('#title-model_product');
 
 const choice = document.querySelector('.choice');
 const newsletter = document.querySelector('#newsletter');
+
+
+const myGallerySection = document.querySelector('#gallery');
 
 choice.addEventListener('click',()=>{
     choice.classList.toggle('activated')
@@ -218,7 +223,16 @@ const platform_cards=[
 window.addEventListener('load',()=>{
     hero_logo.classList.add('onload')
 
+
 })
+
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY + window.innerHeight >= myGallerySection.offsetTop + myGallerySection.offsetHeight / 2) {
+        alert('qwe')
+    }
+})
+
 makeGallery()
 function makeGallery() {
     if (!gallery || gallery.length === 0) {
@@ -337,6 +351,8 @@ document.querySelectorAll('.hero-card').forEach((card,i)=>{
 
 
 
+
+
 document.querySelectorAll('.platform').forEach((platform,i)=>{
     platform.addEventListener('click',()=>{
         card_model.classList.add('active');
@@ -355,6 +371,7 @@ document.querySelectorAll('.platform').forEach((platform,i)=>{
 
 
 
+
 hamberger_menu_link.addEventListener('click',()=>{
     hamberger_menu_icon.classList.toggle('active');
     nav_links.classList.toggle('active');
@@ -365,14 +382,19 @@ hamberger_menu_link.addEventListener('click',()=>{
 document.addEventListener('click', (event) => {
     if (event.target == card_model) {
         card_model.classList.remove('active');
+
     }
   });
+
 
   document.addEventListener('keyup', (event) => {
     if (event.key === 'Escape') {
       event.preventDefault();
       card_model.classList.remove('active');
+      hamberger_menu_icon.classList.remove('active');
+      nav_links.classList.remove('active');
     }
+
   });
 
 

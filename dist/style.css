@@ -52,25 +52,35 @@ body {
 }
 
 .nav-links {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
+
 .nav-links li {
   padding: 0 2rem;
 }
 .nav-links.active {
-  left: 0;
   width: 100%;
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  height: 17vh;
 }
+
+
 
 .nav-links li a:hover {
   text-shadow: 0 0 15px #99774c, 0px -5px 20px #a17e51, 0 5px 20px #96744a;
   color: white;
 }
+
+/* my sections */
+.sectionHovered{
+  text-shadow: 0 0 15px #99774c, 0px -5px 20px #a17e51, 0 5px 20px #96744a;
+  color: white;
+}
+
+/* end of my sections */
 .hero-logo-img {
   opacity: 0;
 }
@@ -205,9 +215,15 @@ h2 {
     width: 320px;
   }
 }
-@media (min-width: 774px) {
+@media (min-width: 768px) {
   .label {
     min-width: 164px;
+  }
+}
+
+@media (max-width: 725px) {
+  .label {
+    min-width: 0px;
   }
 }
 @media (min-width: 1027px) {
@@ -274,8 +290,8 @@ h2 {
   left: 0;
   bottom: 0;
   width: 100%;
-  /* transform: translateY(-50%); */
   height: 100vh;
+  /* transform: translateY(-50%); */
   background: #000000bd;
   text-align: center;
   z-index: 23;
