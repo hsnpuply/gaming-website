@@ -83,11 +83,11 @@
 
     <!-- Heroes Section -->
     <section class="heroes " id="heroes">
-        <div class="heroes-content  lg:container ">
+        <div class="heroes-content  md:container ">
             <!-- Description -->
             <div class="description-heroes mb-16">
                 <h2 class="title-desc">NOW WE'VE COME FULL CIRCLE</h2>
-                <p class="text-desc relative w-full lg:w-3/6">
+                <p class="text-desc relative lg:w-4/6  px-5 md:px-0">
                     A smokescreen covered their continuous blinks towards the outskirts of the great
                     kingdom, until the cathedral was the only thing clearly visible. Along the way, they could sense the
                     great shadow of a Dragon, watching their every step. Then, the voices of survivors seeking revenge
@@ -171,9 +171,9 @@
         <div class="container-gallery md:container">
 
             <!-- Gallery Info -->
-            <div class="gallery-info container">
+            <div class="gallery-info ">
                 <h2 class="gallery-title">Begin Your journey</h2>
-                <p class="gallery-desc text-center text-primary">
+                <p class="gallery-desc text-center text-primary lg:w-4/6 px-5 md:px-0">
                     The ornate peace of these halls would be shattered now and then by the faint whispers of the Statue
                     of a thousand faces, as the soul fragments collided and the Heroes met in glorious Combat. For them
                     it would always be the first time, until someone's time to be free of this burden would come - then
@@ -235,10 +235,10 @@
     <!-- Store -->
     <section class="store" id="store">
         <!-- Store Info -->
-        <div class="store-container container ">
+        <div class="store-container md:container ">
             <div class="store-info mb-20">
                 <h2 class="store_title">CHOOSE YOUR WEAPON</h2>
-                <p class="store_desc">
+                <p class="store_desc lg:w-4/6 px-5 md:px-0">
                     Unleash your revenge upon mankind as you turn and look towards the human cities, only to see a great
                     pillar of flame hit their cathedrals, the ensuing shockwave and flamewall erasing all signs of their
                     kingdoms' existence.
@@ -369,11 +369,14 @@
 
 
     <section class="contact" id="contact">
-        <div class="contact-container container ">
+        <div class="contact-container md:container ">
             <!-- Contact info -->
-            <div class="contact-info container">
+            <div class="contact-info">
                 <h2 class="contact-title pt-6">SUMMON US</h2>
-                <p class="contact-desc">Whether your mind echoes with questions, or your soul seeks for answers untold,
+                <p class="contact-desc lg:w-4/6 px-5 md:px-0">Whether your mind echoes with questions, or your soul
+                    seeks for
+                    answers
+                    untold,
                     stay awhile and write us down your request. If a bug is what bothers you, it shall be purged into
                     eternity via your precious feedback. If a career in warmonging is what you long for, indulge us with
                     a first handshake and be welcome to visit us in our den, located right in the midst of the ancient
@@ -387,31 +390,31 @@
 
 
             <!-- contact form & Location -->
-            <div class="contact-us flex flex-col lg:flex-row   lg:items-start justify-center gap-12 mt-20 px-5 mb-16">
+            <div class="contact-us flex flex-col lg:flex-row   lg:items-start justify-center gap-12 mt-20  mb-16">
                 <!-- form -->
-                <div class="contact-form h-full flex flex-col items-stretch lg:items-center ">
+                <div class="contact-form  h-full flex flex-col items-stretch lg:items-center ">
                     <form action="#" method="post" class="contact-form  flex flex-col justify-center gap-y-6">
-                        <div class="name-form flex justify-start items-center">
-                            <div class="label">
+                        <div class="name-form flex justify-start items-start flex-col md:flex-row gap-2 lg:gap-0">
+                            <div class="label min-w-[0px] px-4  lg:px-0">
                                 <label for="name">Name:</label>
                             </div>
-                            <div class="input">
+                            <div class="input w-full">
                                 <input type="text" name='name' id="name">
                             </div>
                         </div>
-                        <div class="email-form flex justify-start items-center">
-                            <div class="label">
+                        <div class="email-form flex justify-start items-start flex-col md:flex-row gap-2 lg:gap-0">
+                            <div class=" label min-w-[0px] px-4  lg:px-0">
                                 <label for="email">Email:</label>
                             </div>
-                            <div class="input self-start">
+                            <div class="input w-full">
                                 <input type="email" name='email' id="email">
                             </div>
                         </div>
-                        <div class="reason-form flex justify-start items-center">
-                            <div class="label">
+                        <div class="reason-form flex justify-start items-start flex-col md:flex-row gap-2 lg:gap-0">
+                            <div class=" label min-w-[0px] px-4  lg:px-0">
                                 <label for="reason">Reason:</label>
                             </div>
-                            <div class="input">
+                            <div class="input w-full">
                                 <select name="reason" id="reason">
                                     <option value="career" selected>Career</option>
                                     <option value="submit_Bug">Submit Bug</option>
@@ -421,11 +424,11 @@
                             </div>
 
                         </div>
-                        <div class="how-reach-form flex justify-start items-center">
-                            <div class="label">
+                        <div class="how-reach-form  flex justify-start items-start flex-col md:flex-row gap-2 lg:gap-0">
+                            <div class="label min-w-[0px] px-4  lg:px-0">
                                 <label for="how-reach">You Found us:</label>
                             </div>
-                            <div class="input">
+                            <div class="input w-full">
                                 <select name="how-reach" id="how-reach">
                                     <option value="search_engine" selected>Search Engine</option>
                                     <option value="friend">Friend</option>
@@ -435,10 +438,10 @@
                             </div>
                         </div>
                         <div class="newsletter-form flex justify-start items-center">
-                            <div class="label">
+                            <div class="label min-w-[0px] px-4  lg:px-0">
                                 <label for="newsletter">Newsletter:</label>
                             </div>
-                            <div class="input flex items-center">
+                            <div class="input flex items-center ">
                                 <div class="choice cursor-pointer">
                                     <div class="text-choice flex items-center justify-center px-4">
                                         <span class="text-sm">Of course!</span>
@@ -450,21 +453,21 @@
 
                             </div>
                         </div>
-                        <div class="message-form flex  items-center">
-                            <div class="label self-start">
+                        <div class="message-form  flex justify-start items-start flex-col md:flex-row gap-2 lg:gap-0">
+                            <div class="label min-w-[0px]  px-4  lg:px-0">
                                 <label for="message">Message:</label>
                             </div>
-                            <div class="input">
+                            <div class="input w-full ">
                                 <textarea placeholder="Your message..." cols="22" rows="6"></textarea>
                             </div>
                         </div>
-                        <div class="button-form flex  ">
-                            <div class="label opacity-0">
+                        <div class="button-form flex   ">
+                            <div class="label opacity-0 hidden lg:block">
                                 <p>Submit Button</p>
                             </div>
-                            <div class="submit_button input ">
+                            <div class="submit_button  w-full px-5">
                                 <button type="submit"
-                                    class="rounded-sm text-xl flex items-center justify-center">Submit</button>
+                                    class="rounded-sm  text-xl flex items-center justify-center ">Submit</span></button>
                             </div>
                         </div>
                     </form>
@@ -473,11 +476,11 @@
                 <!-- Map Location  -->
                 <div class="contact-map ">
 
-                    <div id="map">
+                    <div id="map" class="">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.2438824332835!2d2.3777520884050882!3d48.89168912446702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66dfccabcd84d%3A0x14476827e9206c0f!2sEpic%20games!5e0!3m2!1sen!2sde!4v1708535399581!5m2!1sen!2sde"
                             allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            class="px-5 w-[500px] h-[340px] lg:w-[750px] lg:h-[450px]"></iframe>
+                            class="px-5 w-full h-[400px] md:w-[700px] md:h-[420px] lg:w-[550px] lg:h-[435px] xl:w-[700px] 2xl:w-[800px] 2xl:h-[532px]"></iframe>
                     </div>
 
 
@@ -499,7 +502,8 @@
         <div class="footer-container container flex items-center justify-around flex-col lg:flex-row gap-10">
             <!-- logo -->
             <div class="logo-footer">
-                <img src="../images/hero-logo.png" alt="Logo" class="footer-logo">
+                <a href="#"><img src="../images/hero-logo.png" alt="Logo" class="footer-logo">
+                </a>
             </div>
 
             <!-- social media -->
@@ -528,7 +532,7 @@
         </div>
 
         <!-- Copyright  -->
-        <div class="copyright flex justify-center items-center flex-col gap-5 pt-10 text-primary container">
+        <div class="copyright flex justify-center items-center flex-col gap-5 pt-5 text-primary container pb-4">
             <p class="text-copyright text-center  ">
                 Copyright © 2017 by Dragonic Inc. All rights reserved ®
             </p>
@@ -573,10 +577,6 @@
                 prevEl: '.swiper-button-prev',
             },
 
-            // And if we need scrollbar
-            // scrollbar: {
-            //     el: '.swiper-scrollbar',
-            // },
         });
     </script>
 </body>

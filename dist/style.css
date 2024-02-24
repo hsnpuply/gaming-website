@@ -172,7 +172,6 @@ h2 {
   letter-spacing: 0.03rem;
   word-spacing: 0.05rem;
   text-shadow: 0px 0px 3px #000000;
-  width: 80%;
 }
 .text-desc::after {
   content: "";
@@ -206,7 +205,11 @@ h2 {
     width: 320px;
   }
 }
-
+@media (min-width: 774px) {
+  .label {
+    min-width: 164px;
+  }
+}
 @media (min-width: 1027px) {
   .hero-img {
     width: 230px;
@@ -843,7 +846,6 @@ h2 {
 }
 
 .label {
-  min-width: 150px;
   text-align: end;
 }
 
@@ -873,7 +875,7 @@ textarea {
 .footer-logo {
   width: 280px;
   filter: drop-shadow(2px 2px 5px #000);
-  /* animation-name: footer-logo-animation; */
+  animation-name: footer-logo-animation;
   animation-duration: 5.5s;
   animation-timing-function: ease-in-out;
   animation-delay: 0.5s;
@@ -887,10 +889,10 @@ textarea {
     transform: rotate(0deg);
   }
   55% {
-    transform: rotate(8deg);
+    transform: rotate(3deg);
   }
   100% {
-    transform: rotate(-8deg);
+    transform: rotate(-2.5deg);
   }
 }
 
@@ -920,7 +922,7 @@ textarea {
   letter-spacing: 0.2rem;
   text-align: center;
   margin-top: 1.75rem;
-  color: #734a32;
+  color: #f3aa80;
   font-size: 140%;
   line-height: 2.5rem;
 }
