@@ -166,7 +166,6 @@ h2 {
   font-family: Helvetica, Arial, sans-serif;
   color: #71675b;
   font-size: 1.2em;
-  padding: 0 20px;
   font-weight: 400;
   text-align: center;
   line-height: 2rem;
@@ -866,3 +865,67 @@ textarea {
 }
 
 /* End of Contact */
+
+/* Footer Section */
+.footer {
+  background: url(../images/dark_leather.png);
+}
+.footer-logo {
+  width: 280px;
+  filter: drop-shadow(2px 2px 5px #000);
+  /* animation-name: footer-logo-animation; */
+  animation-duration: 5.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: 222;
+}
+
+@keyframes footer-logo-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  55% {
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: rotate(-8deg);
+  }
+}
+
+.footer-icon,
+.edit_n_developer {
+  filter: drop-shadow(2px 3px #000);
+  transition: all 0.5s ease-in-out;
+}
+.footer-icon:hover {
+  transform: translateY(-2px);
+  transition: all 0.5s ease-in-out;
+  text-shadow: 0 0 15px #99774c, 0px -5px 15px #a17e51, 0 5px 15px #96744a;
+  color: white;
+}
+
+.edit_n_developer:hover {
+  text-align: center;
+  text-shadow: 0 0 15px #99774c, 0px -5px 15px #a17e51, 0 5px 15px #96744a;
+  transition: all 0.5s ease-in-out;
+  letter-spacing: 0.3rem;
+}
+
+.copyright {
+  font-family: "Cinzel Decorative", "Palatino Light", Times, Times New Roman,
+    Georgia, serif;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  margin-top: 1.75rem;
+  color: #734a32;
+  font-size: 140%;
+  line-height: 2.5rem;
+}
+.edit_n_developer {
+  font-weight: bold;
+}
+
+/* End of Footer Section */
