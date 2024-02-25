@@ -14,6 +14,7 @@
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+
     <!-- Font Awsome Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.2/css/all.min.css"
         integrity="sha512-NicFTMUg/LwBeG8C7VG+gC4YiiRtQACl98QdkmfsLy37RzXdkaUAuPyVMND0olPP4Jn8M/ctesGSB2pgUBDRIw=="
@@ -51,11 +52,11 @@
                      justify-center  text-primary md:my-3
                       text-base lg:text-lg
                       ">
-                    <li class=""><a href="#heroes" class="">Heroes</a>
+                    <li class=""><a href="#heroes" class="" id="heroes-link">Heroes</a>
                     </li>
-                    <li><a href="#gallery" class="gallery-link">Gallery</a></li>
-                    <li><a href="#store" class="">Store</a></li>
-                    <li><a href="#contact" class="">Contact</a></li>
+                    <li><a href="#gallery" id="gallery-link">Gallery</a></li>
+                    <li><a href="#store" id="store-link">Store</a></li>
+                    <li><a href="#contact" id="contact-link">Contact</a></li>
                 </ul>
             </div>
 
@@ -90,7 +91,7 @@
             <!-- Description -->
             <div class="description-heroes mb-16">
                 <h2 class="title-desc">NOW WE'VE COME FULL CIRCLE</h2>
-                <p class="text-desc relative lg:w-4/6  px-5 md:px-0">
+                <p class="text-desc relative lg:w-4/6  px-5 md:px-0 ">
                     A smokescreen covered their continuous blinks towards the outskirts of the great
                     kingdom, until the cathedral was the only thing clearly visible. Along the way, they could sense the
                     great shadow of a Dragon, watching their every step. Then, the voices of survivors seeking revenge
@@ -103,7 +104,7 @@
             <!-- Heroes Preview -->
             <div class="Heroes-introduce overflow-x-hidden text-center w-full mx-auto ">
 
-                <h2 class="title-intro py-2">CHOOSE YOUR HERO</h2>
+                <h2 class="title-intro pb-4 " id="title-intro">CHOOSE YOUR HERO</h2>
                 <div class="heroes-preview flex flex-col lg:flex-row  items-stretch justify-center  gap-y-28"
                     id="heroes-preview">
                     <!--  Completed From DB On Js file -->
@@ -175,8 +176,8 @@
 
             <!-- Gallery Info -->
             <div class="gallery-info ">
-                <h2 class="gallery-title">Begin Your journey</h2>
-                <p class="gallery-desc text-center text-primary lg:w-4/6 px-5 md:px-0">
+                <h2 class="gallery-title" id="gallery-title">Begin Your journey</h2>
+                <p class="gallery-desc text-center text-primary lg:w-4/6 px-5 md:px-0" id="gallery-desc">
                     The ornate peace of these halls would be shattered now and then by the faint whispers of the Statue
                     of a thousand faces, as the soul fragments collided and the Heroes met in glorious Combat. For them
                     it would always be the first time, until someone's time to be free of this burden would come - then
@@ -188,7 +189,7 @@
             </div>
 
             <!-- Gallery Swiper -->
-            <div class="my-gallery-framer   mt-20 mb-24 relative   ">
+            <div class="game-gallery-framer   mt-20 mb-24 relative   " id="game-gallery-framer">
                 <!-- Borders -->
                 <div class="model-corner model-corner-top-right"></div>
                 <div class="model-corner model-corner-top-left"></div>
@@ -544,13 +545,15 @@
                         href="https://github.com/hsnpuply">Hsn
                         Puply</a></span>
             </p>
-
         </div>
     </footer>
 
 
 
-    <script src="script.js"></script>
+
+    <script type="text/javascript" src="script.js">
+
+    </script>
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>

@@ -10,6 +10,7 @@ const heroes_preview  = document.querySelector('#heroes-preview ');
 const platforms_store = document.querySelector('.platforms-store');
 const store_name = document.querySelector('#store-name');
 const heroes = document.querySelector('#heroes');
+const title_intro = document.querySelector('#title-intro');
 
 const card_model = document.querySelector('.hero-model-info');
 const close_model = document.querySelector('#close-model');
@@ -20,7 +21,85 @@ const choice = document.querySelector('.choice');
 const newsletter = document.querySelector('#newsletter');
 
 
-const myGallerySection = document.querySelector('#gallery');
+// sections
+const GallerySection = document.querySelector('#gallery');
+const HeroesSection = document.querySelector('#heroes');
+const ContactSection = document.querySelector('#contact');
+const StoreSection = document.querySelector('#store');
+
+
+
+
+// my links
+const gallery_link = document.querySelector('#gallery-link');
+const contact_link = document.querySelector('#contact-link');
+const heroes_link = document.querySelector('#heroes-link');
+const store_link = document.querySelector('#store-link');
+
+
+// appears
+const game_gallery = document.querySelector('#game-gallery-framer');
+const gallery_title = document.querySelector('#gallery-title');
+const gallery_desc = document.querySelector('#gallery-desc');
+
+
+
+
+// test
+
+// document.querySelector('.title-intro').classList.add('title-appear')
+
+// When Scroll entered the current section then link of current section will be highlighted
+window.addEventListener('scroll', () => {
+
+    // Heroes Section
+    window.scrollY + window.innerHeight >= HeroesSection.offsetTop + HeroesSection.offsetHeight / 1.5
+     && window.scrollY < GallerySection.offsetTop
+    ? (heroes_link.classList.add('entered_section') , title_intro.classList.add('entered_section','appear-from-right-title') , document.querySelectorAll('.hero-card').forEach((card) => {
+        card.classList.add('appear-from-right-content');
+    })
+    )
+    : heroes_link.classList.remove('entered_section')
+
+
+
+
+
+    // Gallery Section
+    window.scrollY + window.innerHeight >= GallerySection.offsetTop + GallerySection.offsetHeight / 2
+    && window.scrollY < StoreSection.offsetTop
+    ? (gallery_link.classList.add('entered_section')
+    )
+    : gallery_link.classList.remove('entered_section')
+
+
+    // gallery appear element
+
+    window.scrollY + window.innerHeight >= GallerySection.offsetTop + GallerySection.offsetHeight / 4
+    && window.scrollY < StoreSection.offsetTop
+    ? (gallery_title.classList.add('entered_section','appear-from-left-title'),gallery_desc.classList.add('appear-from-left-title'),
+    game_gallery.classList.add('appear-from-left-content')
+    )
+    : console.log('.');
+
+
+
+    // Store Section
+    window.scrollY + window.innerHeight >= StoreSection.offsetTop + StoreSection.offsetHeight / 1.1
+    && window.scrollY < ContactSection.offsetTop
+    ? store_link.classList.add('entered_section')
+    : store_link.classList.remove('entered_section')
+
+    // Contact Section
+    window.scrollY + window.innerHeight >= ContactSection.offsetTop + ContactSection.offsetHeight / 1.3
+    ? contact_link.classList.add('entered_section')
+    : contact_link.classList.remove('entered_section')
+
+
+})
+
+
+
 
 choice.addEventListener('click',()=>{
     choice.classList.toggle('activated')
@@ -28,7 +107,6 @@ choice.addEventListener('click',()=>{
     choice.classList.contains('activated') ? newsletter.checked=true : newsletter.checked=false;
 
 })
-
 
 
 
@@ -227,11 +305,7 @@ window.addEventListener('load',()=>{
 })
 
 
-window.addEventListener('scroll', () => {
-    if(window.scrollY + window.innerHeight >= myGallerySection.offsetTop + myGallerySection.offsetHeight / 2) {
-        alert('qwe')
-    }
-})
+
 
 makeGallery()
 function makeGallery() {

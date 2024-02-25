@@ -67,15 +67,13 @@ body {
   height: 17vh;
 }
 
-
-
 .nav-links li a:hover {
   text-shadow: 0 0 15px #99774c, 0px -5px 20px #a17e51, 0 5px 20px #96744a;
   color: white;
 }
 
 /* my sections */
-.sectionHovered{
+.entered_section {
   text-shadow: 0 0 15px #99774c, 0px -5px 20px #a17e51, 0 5px 20px #96744a;
   color: white;
 }
@@ -83,6 +81,24 @@ body {
 /* end of my sections */
 .hero-logo-img {
   opacity: 0;
+  animation-name: hero-logo-animate;
+  animation-duration: 3.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes hero-logo-animate {
+  0% {
+    transform: scale(1) rotate(2deg);
+  }
+  50% {
+    transform: scale(1.02) rotate(-1deg);
+  }
+  100% {
+    transform: scale(1.02) rotate(1deg);
+  }
 }
 .hero-logo-img.onload {
   display: flex;
@@ -240,6 +256,69 @@ h2 {
     height: 240px;
   }
 }
+
+/* Appear */
+
+/* Heroes Appear */
+.title-intro {
+  opacity: 0;
+  transform: translate(150px);
+  transition: all 2s ease-in-out;
+}
+
+.hero-card {
+  opacity: 0;
+  transform: translate(-120px);
+  transition: all 1s ease-in-out;
+}
+
+/* Gallery Appear */
+.game-gallery-framer {
+  opacity: 0;
+  transform: translate(120px);
+  transition: all 1s ease-in-out;
+}
+
+.gallery-title {
+  opacity: 0;
+  transform: translate(-150px);
+  transition: all 2s ease-in-out;
+}
+
+.gallery-desc {
+  opacity: 0;
+  transform: translate(-150px);
+  transition: all 2s ease-in-out;
+  letter-spacing: 0.03rem;
+}
+
+/* Store Appear */
+
+/* Contact Appear */
+
+.appear-from-right-content {
+  opacity: 1;
+  transform: translate(0);
+  transition: all 1.8s ease-in-out;
+}
+.appear-from-right-title {
+  opacity: 1 !important;
+  transform: translate(0px) !important;
+  transition: all 2s ease-in-out;
+}
+
+.appear-from-left-content {
+  opacity: 1;
+  transform: translate(0);
+  transition: all 1.8s ease-in-out;
+}
+.appear-from-left-title {
+  opacity: 1 !important;
+  transform: translate(0px) !important;
+  transition: all 2s ease-in-out;
+}
+
+/* End Appear */
 
 .hero-card:hover .hero-img {
   opacity: 1;
@@ -496,9 +575,6 @@ h2 {
   box-shadow: inset 0 10px 50px #000000;
 }
 
-.gallery-desc {
-  letter-spacing: 0.03rem;
-}
 .gallery-info {
   display: flex;
   flex-direction: column;
