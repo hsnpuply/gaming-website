@@ -52,11 +52,11 @@
                      justify-center  text-primary md:my-3
                       text-base lg:text-lg
                       ">
-                    <li class=""><a href="#heroes" class="" id="heroes-link">Heroes</a>
+                    <li class=""><a href="#heroes" class="navbar-link" id="heroes-link">Heroes</a>
                     </li>
-                    <li><a href="#gallery" id="gallery-link">Gallery</a></li>
-                    <li><a href="#store" id="store-link">Store</a></li>
-                    <li><a href="#contact" id="contact-link">Contact</a></li>
+                    <li><a href="#gallery" class="navbar-link" id="gallery-link">Gallery</a></li>
+                    <li><a href="#store" class="navbar-link" id="store-link">Store</a></li>
+                    <li><a href="#contact" class="navbar-link" id="contact-link">Contact</a></li>
                 </ul>
             </div>
 
@@ -136,8 +136,7 @@
                                 class="title-model_product" id="title-model_product"></span> <span
                                 id="honored-hero_name"></span>
                         </h4>
-                        <span class="close-model  text- cursor-pointer text-2xl text-primary absolute top-5 right-8"
-                            id="close-model ">x</span>
+                        <span class="close-model  text- cursor-pointer text-2xl text-primary absolute top-5 right-8" id="close-model-btn">x</span>
                     </div>
 
                     <!-- Hero model info -->
@@ -241,8 +240,8 @@
         <!-- Store Info -->
         <div class="store-container md:container ">
             <div class="store-info mb-20">
-                <h2 class="store_title">CHOOSE YOUR WEAPON</h2>
-                <p class="store_desc lg:w-4/6 px-5 md:px-0">
+                <h2 class="store_title" id="store-title">CHOOSE YOUR WEAPON</h2>
+                <p class="store_desc lg:w-4/6 px-5 md:px-0" id="store-desc">
                     Unleash your revenge upon mankind as you turn and look towards the human cities, only to see a great
                     pillar of flame hit their cathedrals, the ensuing shockwave and flamewall erasing all signs of their
                     kingdoms' existence.
@@ -376,8 +375,9 @@
         <div class="contact-container md:container ">
             <!-- Contact info -->
             <div class="contact-info">
-                <h2 class="contact-title pt-6">SUMMON US</h2>
-                <p class="contact-desc lg:w-4/6 px-5 md:px-0">Whether your mind echoes with questions, or your soul
+                <h2 class="contact-title pt-6" id="contact-title">SUMMON US</h2>
+                <p class="contact-desc lg:w-4/6 px-5 md:px-0" id="contact-desc">Whether your mind echoes with questions,
+                    or your soul
                     seeks for
                     answers
                     untold,
@@ -394,7 +394,8 @@
 
 
             <!-- contact form & Location -->
-            <div class="contact-us flex flex-col lg:flex-row   lg:items-start justify-center gap-12 mt-20  mb-16">
+            <div class="contact-us flex flex-col lg:flex-row   lg:items-start justify-center gap-12 mt-20  mb-16"
+                id="contact-us">
                 <!-- form -->
                 <div class="contact-form  h-full flex flex-col items-stretch lg:items-center ">
                     <form action="#" method="post" class="contact-form  flex flex-col justify-center gap-y-6">
@@ -503,9 +504,10 @@
     <!-- End of Divider -->
 
     <footer class="footer py-8 flex flex-col gap-5" id="footer">
-        <div class="footer-container container flex items-center justify-around flex-col lg:flex-row gap-10">
+        <div class="footer-container container flex items-center justify-around flex-col lg:flex-row gap-10"
+            id="footer-container">
             <!-- logo -->
-            <div class="logo-footer">
+            <div class="logo-footer" id="logo-footer">
                 <a href="#"><img src="../images/hero-logo.png" alt="Logo" class="footer-logo">
                 </a>
             </div>
@@ -515,19 +517,19 @@
                 <div class="social-media-icons ">
                     <ul class="flex justify-center  items-center gap-10">
                         <li><a href=""><i
-                                    class="fab fa-instagram text-3xl lg:text-4xl xl:text-5xl text-primary footer-icon"></i></a>
+                                    class="fab fa-instagram footer-social text-3xl lg:text-4xl xl:text-5xl text-primary footer-icon"></i></a>
                         </li>
                         <li><a href=""><i
-                                    class="fab fa-twitter text-3xl lg:text-4xl xl:text-5xl text-primary footer-icon"></i></a>
+                                    class="fab fa-twitter footer-social text-3xl lg:text-4xl xl:text-5xl text-primary footer-icon"></i></a>
                         </li>
                         <li><a href=""><i
-                                    class="fab fa-facebook-f text-3xl lg:text-4xl xl:text-5xl text-primary footer-icon"></i></a>
+                                    class="fab fa-facebook-f footer-social text-3xl lg:text-4xl xl:text-5xl text-primary footer-icon"></i></a>
                         </li>
                         <li><a href=""><i
-                                    class="fab fa-youtube text-3xl lg:text-4xl xl:text-5xl text-primary footer-icon"></i></a>
+                                    class="fab fa-youtube footer-social text-3xl lg:text-4xl xl:text-5xl text-primary footer-icon"></i></a>
                         </li>
                         <li><a href=""><i
-                                    class="fab fa-steam text-3xl lg:text-4xl xl:text-5xl text-primary footer-icon"></i></a>
+                                    class="fab fa-steam footer-social text-3xl lg:text-4xl xl:text-5xl text-primary footer-icon"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -536,12 +538,13 @@
         </div>
 
         <!-- Copyright  -->
-        <div class="copyright flex justify-center items-center flex-col gap-5 pt-5 text-primary container pb-4">
+        <div class="copyright flex justify-center items-center flex-col gap-5 pt-5 text-primary container pb-4"
+            id="copyright">
             <p class="text-copyright text-center  ">
                 Copyright © 2017 by Dragonic Inc. All rights reserved ®
             </p>
             <p>
-                Edit & Developed By <span class="edit_n_developer text-primary ">@<a
+                Edit & Developed By <span class="edit_n_developer text-primary " id="hsnpuply_dev">@<a
                         href="https://github.com/hsnpuply">Hsn
                         Puply</a></span>
             </p>

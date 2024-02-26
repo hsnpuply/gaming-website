@@ -13,13 +13,16 @@ const heroes = document.querySelector('#heroes');
 const title_intro = document.querySelector('#title-intro');
 
 const card_model = document.querySelector('.hero-model-info');
-const close_model = document.querySelector('#close-model');
+
+const close_model_btn = document.querySelector('#close-model-btn');
 const hero__model = document.querySelector('.hero-model');
 const title_model__product = document.querySelector('#title-model_product');
 
 const choice = document.querySelector('.choice');
 const newsletter = document.querySelector('#newsletter');
 
+
+const close_btn =  document.querySelector('#close-model-btn');
 
 // sections
 const GallerySection = document.querySelector('#gallery');
@@ -37,23 +40,84 @@ const heroes_link = document.querySelector('#heroes-link');
 const store_link = document.querySelector('#store-link');
 
 
-// appears
+// appears Animate
+// a-gallery
 const game_gallery = document.querySelector('#game-gallery-framer');
 const gallery_title = document.querySelector('#gallery-title');
 const gallery_desc = document.querySelector('#gallery-desc');
+// a-store
+const store_title = document.querySelector('#store-title');
+const store_desc = document.querySelector('#store-desc');
+const platforms_store_ID = document.querySelector('#platforms-store');
+// a-developers
+const DevelopersSection = document.querySelector('#developers');
+const developers_title = document.querySelector('.developers-title');
+// a-contact
+const contact_us = document.querySelector('#contact-us');
+const contact_title = document.querySelector('#contact-title');
+const contact_desc = document.querySelector('#contact-desc');
 
+// a-footer
+const FooterSection = document.querySelector('#footer');
+const footer_container = document.querySelector('#footer-container');
+const copyright = document.querySelector('#copyright');
 
-
-
-// test
-
-// document.querySelector('.title-intro').classList.add('title-appear')
+// end of appears Animate
 
 // When Scroll entered the current section then link of current section will be highlighted
+
 window.addEventListener('scroll', () => {
+    console.log(window.scrollY);
+    // in small Size version of animations
+    if (window.innerWidth <= 720) {
+
+        // Heroes Section
+        window.scrollY + window.innerHeight >= HeroesSection.offsetTop + HeroesSection.offsetHeight / 4
+        && window.scrollY < GallerySection.offsetTop
+       ? ( title_intro.classList.add('entered_section','appear-from-right-title') , document.querySelectorAll('.hero-card').forEach((card) => {
+           card.classList.add('appear-from-right-content');
+       })
+       )
+       :
+
+
+
+
+
+         // Store Section
+     window.scrollY + window.innerHeight >= StoreSection.offsetTop + StoreSection.offsetHeight / 4
+        && window.scrollY < ContactSection.offsetTop
+         ? (store_link.classList.add('entered_section'),store_title.classList.add('entered_section','appear-from-right-title'),store_desc.classList.add('appear-from-right-title'),
+           platforms_store_ID.classList.add('appear-from-right-content')
+     )
+     : store_link.classList.remove('entered_section')
+
+
+
+      // Developers section
+    window.scrollY + window.innerHeight >= DevelopersSection.offsetTop + DevelopersSection.offsetHeight / 4
+    && window.scrollY < ContactSection.offsetTop
+    ? (developers_title.classList.add('entered_section','appear-from-left-title'),
+    document.querySelectorAll('.devleopers-team').forEach((devs)=>{
+    devs.classList.add('appear-from-left-content')
+    }))
+    :
+
+
+
+     // Contact Section
+     window.scrollY + window.innerHeight >= ContactSection.offsetTop + ContactSection.offsetHeight / 4
+     ? (contact_link.classList.add('entered_section'),contact_title.classList.add('entered_section','appear-from-right-title'),
+     contact_desc.classList.add('appear-from-right-title'),
+     contact_us.classList.add('appear-from-right-content'))
+     : contact_link.classList.remove('entered_section')
+
+      }
+
+
 
     // Heroes Section
-    window.scrollY + window.innerHeight >= HeroesSection.offsetTop + HeroesSection.offsetHeight / 1.5
+    window.scrollY + window.innerHeight >= HeroesSection.offsetTop + HeroesSection.offsetHeight / 1.9
      && window.scrollY < GallerySection.offsetTop
     ? (heroes_link.classList.add('entered_section') , title_intro.classList.add('entered_section','appear-from-right-title') , document.querySelectorAll('.hero-card').forEach((card) => {
         card.classList.add('appear-from-right-content');
@@ -66,7 +130,7 @@ window.addEventListener('scroll', () => {
 
 
     // Gallery Section
-    window.scrollY + window.innerHeight >= GallerySection.offsetTop + GallerySection.offsetHeight / 2
+    window.scrollY + window.innerHeight >= GallerySection.offsetTop + GallerySection.offsetHeight / 1.9
     && window.scrollY < StoreSection.offsetTop
     ? (gallery_link.classList.add('entered_section')
     )
@@ -80,20 +144,42 @@ window.addEventListener('scroll', () => {
     ? (gallery_title.classList.add('entered_section','appear-from-left-title'),gallery_desc.classList.add('appear-from-left-title'),
     game_gallery.classList.add('appear-from-left-content')
     )
-    : console.log('.');
+    :
 
 
 
     // Store Section
-    window.scrollY + window.innerHeight >= StoreSection.offsetTop + StoreSection.offsetHeight / 1.1
+    window.scrollY + window.innerHeight >= StoreSection.offsetTop + StoreSection.offsetHeight / 1.3
     && window.scrollY < ContactSection.offsetTop
-    ? store_link.classList.add('entered_section')
+    ? (store_link.classList.add('entered_section'),store_title.classList.add('entered_section','appear-from-right-title'),store_desc.classList.add('appear-from-right-title'),
+        platforms_store_ID.classList.add('appear-from-right-content')
+    )
     : store_link.classList.remove('entered_section')
 
+
+    // Developers section
+
+    window.scrollY + window.innerHeight >= DevelopersSection.offsetTop + DevelopersSection.offsetHeight / 1.4
+    && window.scrollY < ContactSection.offsetTop
+    ? (developers_title.classList.add('entered_section','appear-from-left-title'),
+    document.querySelectorAll('.devleopers-team').forEach((devs)=>{
+    devs.classList.add('appear-from-left-content')
+    }))
+    :
+
+
+
     // Contact Section
-    window.scrollY + window.innerHeight >= ContactSection.offsetTop + ContactSection.offsetHeight / 1.3
-    ? contact_link.classList.add('entered_section')
+    window.scrollY + window.innerHeight >= ContactSection.offsetTop + ContactSection.offsetHeight / 1.4
+    ? (contact_link.classList.add('entered_section'),contact_title.classList.add('entered_section','appear-from-right-title'),
+    contact_desc.classList.add('appear-from-right-title'),
+    contact_us.classList.add('appear-from-right-content'))
     : contact_link.classList.remove('entered_section')
+
+
+    // Footer Section
+    window.scrollY + window.innerHeight >= FooterSection.offsetTop + FooterSection.offsetHeight / 1.3
+    ? (copyright.classList.add('appear-from-right-title'),footer_container.classList.add('appear-from-right-content')): console.log('');
 
 
 })
@@ -419,7 +505,7 @@ document.querySelectorAll('.hero-card').forEach((card,i)=>{
     </div>
 
         `
-        honored_hero__name.innerHTML= ` ${heroes_stats[i].hero_name}`
+        honored_hero__name.innerHTML= `Hero Name : ${heroes_stats[i].hero_name}`
     })
 })
 
@@ -456,7 +542,6 @@ hamberger_menu_link.addEventListener('click',()=>{
 document.addEventListener('click', (event) => {
     if (event.target == card_model) {
         card_model.classList.remove('active');
-
     }
   });
 
@@ -471,12 +556,12 @@ document.addEventListener('click', (event) => {
 
   });
 
-
-
-
-
-close_model.addEventListener('click',()=>{
+close_btn.addEventListener('click',(e)=>{
+    e.preventDefault();
     card_model.classList.remove('active');
-})
+
+  })
+
+
 
 
