@@ -338,12 +338,14 @@ h2 {
 }
 /* Appear Base Animate */
 
-.appear-from-left-content,.appear-from-right-content {
-  opacity: 1;
-  transform: translate(0);
+.appear-from-left-content,
+.appear-from-right-content {
+  opacity: 1 !important;
+  transform: translate(0) !important;
   transition: all 1.8s ease-in-out;
 }
-.appear-from-left-title,.appear-from-right-title  {
+.appear-from-left-title,
+.appear-from-right-title {
   opacity: 1 !important;
   transform: translate(0px) !important;
   transition: all 2s ease-in-out;
@@ -1056,8 +1058,6 @@ textarea {
     transform: scale(1.02) rotate(1deg);
   }
 }
-
-
 
 @keyframes footer-logo-animation {
   0% {
