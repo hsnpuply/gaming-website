@@ -89,17 +89,6 @@ body {
   animation-direction: alternate;
 }
 
-@keyframes hero-logo-animate {
-  0% {
-    transform: scale(1) rotate(2deg);
-  }
-  50% {
-    transform: scale(1.02) rotate(-1deg);
-  }
-  100% {
-    transform: scale(1.02) rotate(1deg);
-  }
-}
 .hero-logo-img.onload {
   display: flex;
   opacity: 1;
@@ -342,33 +331,22 @@ h2 {
   transition: all 1s ease-in-out !important;
 }
 
-.copyright{
+.copyright {
   opacity: 0;
   transform: translate(120px);
   transition: all 1s ease-in-out !important;
 }
 /* Appear Base Animate */
 
-.appear-from-left-content {
+.appear-from-left-content,.appear-from-right-content {
   opacity: 1;
   transform: translate(0);
   transition: all 1.8s ease-in-out;
 }
-.appear-from-left-title {
+.appear-from-left-title,.appear-from-right-title  {
   opacity: 1 !important;
   transform: translate(0px) !important;
   transition: all 2s ease-in-out;
-}
-
-.appear-from-right-content {
-  opacity: 1 !important;
-  transform: translate(0) !important;
-  transition: all 1.8s ease-in-out !important;
-}
-.appear-from-right-title {
-  opacity: 1 !important;
-  transform: translate(0px) !important;
-  transition: all 2s ease-in-out !important;
 }
 
 /* End Appear */
@@ -449,17 +427,6 @@ h2 {
   .hero-model {
     width: 80vw;
     height: auto;
-  }
-}
-
-@keyframes hero-model-active {
-  0% {
-    transform: translateY(-50%);
-    opacity: 0.2;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 
@@ -1029,18 +996,6 @@ textarea {
   z-index: 222;
 }
 
-@keyframes footer-logo-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  55% {
-    transform: rotate(3deg);
-  }
-  100% {
-    transform: rotate(-2.5deg);
-  }
-}
-
 .footer-icon,
 .edit_n_developer {
   filter: drop-shadow(2px 3px #000);
@@ -1076,3 +1031,42 @@ textarea {
 }
 
 /* End of Footer Section */
+
+/* Keyframes */
+
+@keyframes hero-model-active {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes hero-logo-animate {
+  0% {
+    transform: scale(1) rotate(2deg);
+  }
+  50% {
+    transform: scale(1.02) rotate(-1deg);
+  }
+  100% {
+    transform: scale(1.02) rotate(1deg);
+  }
+}
+
+
+
+@keyframes footer-logo-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  55% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-2.5deg);
+  }
+}

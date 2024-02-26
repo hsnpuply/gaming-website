@@ -187,14 +187,9 @@ window.addEventListener('scroll', () => {
 
 
 
-choice.addEventListener('click',()=>{
-    choice.classList.toggle('activated')
-
-    choice.classList.contains('activated') ? newsletter.checked=true : newsletter.checked=false;
-
-})
 
 
+// Database
 
 const heroes_stats = [
     {
@@ -384,6 +379,9 @@ const platform_cards=[
     },
 ]
 
+
+
+// page onload
 window.addEventListener('load',()=>{
     hero_logo.classList.add('onload')
 
@@ -392,7 +390,9 @@ window.addEventListener('load',()=>{
 
 
 
+// Automation
 
+// Gallery Automation
 makeGallery()
 function makeGallery() {
     if (!gallery || gallery.length === 0) {
@@ -417,6 +417,8 @@ function makeGallery() {
     swiper_wrapper.innerHTML = swiperHtml;
   }
 
+
+//   Making Heroes Automation
   makeHeroes()
   function makeHeroes() {
       if (!heroes_models || heroes_models.length === 0) {
@@ -445,6 +447,7 @@ function makeGallery() {
       heroes_preview.innerHTML = swiperHtml;
     }
 
+//   Making Platforms Automation
     makePlatform_stores()
     function makePlatform_stores(){
             if (!platform_cards || platform_cards.length === 0) {
@@ -488,6 +491,37 @@ function makeGallery() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// Models preview
+// shows preview for platforms
+document.querySelectorAll('.platform').forEach((platform,i)=>{
+    platform.addEventListener('click',()=>{
+        card_model.classList.add('active');
+        info_hero__model.innerHTML= `
+
+        <img src="${platforms[i].img}" alt="Hero Model" class="hero-model-img h-[80%] py-2">
+        <!-- stats -->
+        <p class="text-center text-primary text-lg p-2 price-value">${platforms[i].price}</p>
+    </div>
+
+        `
+        honored_hero__name.innerHTML= ` ${platforms[i].name}`
+        title_model__product.innerHTML='Dragonic: '
+    })
+})
+
+// shows heroes preview
 document.querySelectorAll('.hero-card').forEach((card,i)=>{
     card.addEventListener('click',()=>{
         card_model.classList.add('active');
@@ -511,33 +545,6 @@ document.querySelectorAll('.hero-card').forEach((card,i)=>{
 
 
 
-
-
-document.querySelectorAll('.platform').forEach((platform,i)=>{
-    platform.addEventListener('click',()=>{
-        card_model.classList.add('active');
-        info_hero__model.innerHTML= `
-
-        <img src="${platforms[i].img}" alt="Hero Model" class="hero-model-img h-[80%] py-2">
-        <!-- stats -->
-        <p class="text-center text-primary text-lg p-2 price-value">${platforms[i].price}</p>
-    </div>
-
-        `
-        honored_hero__name.innerHTML= ` ${platforms[i].name}`
-        title_model__product.innerHTML='Dragonic: '
-    })
-})
-
-
-
-
-hamberger_menu_link.addEventListener('click',()=>{
-    hamberger_menu_icon.classList.toggle('active');
-    nav_links.classList.toggle('active');
-})
-
-
 // Prview Model ux
 document.addEventListener('click', (event) => {
     if (event.target == card_model) {
@@ -545,7 +552,15 @@ document.addEventListener('click', (event) => {
     }
   });
 
+  //   hero model
+close_btn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    card_model.classList.remove('active');
 
+  })
+
+
+//   using ESC key to close preview model
   document.addEventListener('keyup', (event) => {
     if (event.key === 'Escape') {
       event.preventDefault();
@@ -556,6 +571,7 @@ document.addEventListener('click', (event) => {
 
   });
 
+  //  close  btn hero model
 close_btn.addEventListener('click',(e)=>{
     e.preventDefault();
     card_model.classList.remove('active');
@@ -565,3 +581,21 @@ close_btn.addEventListener('click',(e)=>{
 
 
 
+
+// Form
+// newsletter
+  choice.addEventListener('click',()=>{
+    choice.classList.toggle('activated')
+    choice.classList.contains('activated') ? newsletter.checked=true : newsletter.checked=false;
+
+})
+
+
+
+
+
+// Hamberger menu (Mobile Version)
+hamberger_menu_link.addEventListener('click',()=>{
+    hamberger_menu_icon.classList.toggle('active');
+    nav_links.classList.toggle('active');
+})
